@@ -157,12 +157,10 @@ xmlport 78603 "BAC Import Trans. Source 2018"
 
     trigger OnPostXmlPort()
     begin
-        with TransProject do begin
-            "File Name" := currXMLport.Filename();
-            while (StrPos("File Name", '\') > 0) do
-                "File Name" := CopyStr("File Name", StrPos("File Name", '\') + 1);
-            Modify();
-        end;
+        TransProject."File Name" := currXMLport.Filename();
+        while (StrPos(TransProject."File Name", '\') > 0) do
+            FileName := CopyStr(TransProject."File Name", StrPos(TransProject."File Name", '\') + 1);
+        TransProject.Modify();
     end;
 
     procedure SetProjectCode(inProjectCode: Code[10])

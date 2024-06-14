@@ -1,3 +1,4 @@
 {
-    "al.defaultLaunchConfigurationName": "Translate Server"
+    "al.defaultLaunchConfigurationName": "Translate Server",
+    "al.ruleSetPath": ".vscode/ruleSet.json",
 }

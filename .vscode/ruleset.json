@@ -1,0 +1,36 @@
+{
+    "name": "SCL ruleset",
+    "description": "General ruleset for the Scandlines ERP Project. Feel free to make your own additions.",
+    "rules": [
+        {
+            "id": "AA0008",
+            "action": "None",
+            "justification": "Rule removed in later version of AL Language extension"
+        },
+        {
+            "id": "AA0072",
+            "action": "None",
+            "justification": "Rule does not consider prefixes."
+        },
+        {
+            "id": "AA0215",
+            "action": "None",
+            "justification": "File Naming rules are not applied'."
+        },
+        {
+            "id": "AA0218",
+            "action": "Hidden",
+            "justification": "Tooltips are not necessary for now."
+        },
+        {
+            "id": "AA0214",
+            "action": "None",
+            "justification": "Rule is not currently understood."
+        },
+        {
+            "id": "AA0217",
+            "action": "None",
+            "justification": "Rule is not currently understood."
+        }
+    ]
+}

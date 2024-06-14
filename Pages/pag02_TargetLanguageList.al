@@ -46,6 +46,7 @@ page 78602 "BAC Target Language List"
             part(FactBox; "BAC Trans Source Factbox")
             {
                 SubPageLink = "Project Code" = field("Project Code");
+                ApplicationArea = All;
             }
         }
     }

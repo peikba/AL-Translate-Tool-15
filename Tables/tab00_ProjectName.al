@@ -116,10 +116,10 @@ table 78600 "BAC Translation Project"
             OptionMembers = Open,Released,Closed;
             OptionCaption = 'Open,Released,Closed';
         }
-        field(140;"Base Translation Imported";Boolean)
+        field(140; "Base Translation Imported"; Boolean)
         {
-            Caption='Base Translation Imported';
-            Editable=false;
+            Caption = 'Base Translation Imported';
+            Editable = false;
         }
     }
 
@@ -184,15 +184,13 @@ table 78600 "BAC Translation Project"
         TransSetup: Record "BAC Translation Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
     begin
-        with TransProject do begin
-            TransProject := Rec;
-            TransSetup.get;
-            TransSetup.TestField("Project Nos.");
-            if NoSeriesMgt.SelectSeries(TransSetup."Project Nos.", xRec."No. Series", "No. Series") then begin
-                NoSeriesMgt.SetSeries("Project Code");
-                Rec := TransProject;
-                exit(true);
-            end;
+        TransProject := Rec;
+        TransSetup.get;
+        TransSetup.TestField("Project Nos.");
+        if NoSeriesMgt.SelectSeries(TransSetup."Project Nos.", xRec."No. Series", "No. Series") then begin
+            NoSeriesMgt.SetSeries("Project Code");
+            Rec := TransProject;
+            exit(true);
         end;
     end;
 }
