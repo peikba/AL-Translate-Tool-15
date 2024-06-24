@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78613 "BAC Translation Activities"
 {
     Caption = 'Translation Activities';
@@ -11,17 +12,17 @@ page 78613 "BAC Translation Activities"
             cuegroup("Statuses")
             {
                 Caption = 'Statuses';
-                field("Open Projects"; "Open Projects")
+                field("Open Projects"; Rec."Open Projects")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Open Projects - not sent to customer';
                 }
-                field("Released Projects"; "Released Projects")
+                field("Released Projects"; Rec."Released Projects")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Released Projects - sent to customer, but not finished';
                 }
-                field("Finished Projects"; "Finished Projects")
+                field("Finished Projects"; Rec."Finished Projects")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Finished Projects - sent to customer and done for now';
@@ -30,11 +31,11 @@ page 78613 "BAC Translation Activities"
             cuegroup("Totals")
             {
                 Caption = 'Totals';
-                field("Projects this Month"; "Projects this Month")
+                field("Projects this Month"; Rec."Projects this Month")
                 {
                     ApplicationArea = All;
                 }
-                field("Total Projects"; "Total Projects")
+                field("Total Projects"; Rec."Total Projects")
                 {
                     ApplicationArea = All;
                 }
@@ -50,12 +51,12 @@ page 78613 "BAC Translation Activities"
         DateFilterLbl: Label '%1..%2';
         UserAccess: Record "BAC User Access";
     begin
-        if not Get() then begin
-            Init();
-            Insert();
+        if not Rec.Get() then begin
+            Rec.Init();
+            Rec.Insert();
         end;
         DateFilterTxt := StrSubstNo(DateFilterLbl, CalcDate('<-CM>', Today()), Today());
-        SetFilter("Month Date Filter", DateFilterTxt);
+        Rec.SetFilter("Month Date Filter", DateFilterTxt);
         UserAccess.SetRange("User Id", UserId());
         if UserAccess.FindSet() then
             repeat
@@ -64,6 +65,7 @@ page 78613 "BAC Translation Activities"
                 else
                     ProjectFilterTxt := UserAccess."Project Code";
             until UserAccess.Next() = 0;
-        SetFilter("Project Filter", ProjectFilterTxt);
+        Rec.SetFilter("Project Filter", ProjectFilterTxt);
     end;
 }
+#pragma implicitwith restore

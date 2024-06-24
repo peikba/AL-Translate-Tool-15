@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78603 "BAC Translation Target List"
 {
     Caption = 'Translation Target List';
@@ -11,28 +12,28 @@ page 78603 "BAC Translation Target List"
         {
             repeater(GroupName)
             {
-                field("Field Name"; "Field Name")
+                field("Field Name"; Rec."Field Name")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Trans-Unit Id"; "Trans-Unit Id")
+                field("Trans-Unit Id"; Rec."Trans-Unit Id")
                 {
                     ApplicationArea = All;
                     Visible = false;
 
                 }
 
-                field(Source; Source)
+                field(Source; Rec.Source)
                 {
                     ApplicationArea = All;
                 }
-                field(Translate2; Translate)
+                field(Translate2; Rec.Translate)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Set the Translate field to no if you don''t want it to be translated';
                 }
-                field(Target; Target)
+                field(Target; Rec.Target)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enter the translated text';
@@ -42,7 +43,7 @@ page 78603 "BAC Translation Target List"
                     end;
 
                 }
-                field(Occurrencies; Occurrencies)
+                field(Occurrencies; Rec.Occurrencies)
                 {
                     Visible = false;
                     ApplicationArea = All;
@@ -78,22 +79,19 @@ page 78603 "BAC Translation Target List"
                 ApplicationArea = All;
                 Caption = 'Translate';
                 Image = Translation;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 Enabled = ShowTranslate;
 
                 trigger OnAction();
                 var
-                    GoogleTranslate: Codeunit "BAC Google Translate Rest";
                     Project: Record "BAC Translation Project";
+                    GoogleTranslate: Codeunit "BAC Google Translate Rest";
                 begin
-                    Project.get("Project Code");
-                    Target := GoogleTranslate.Translate(Project."Source Language ISO code",
-                                              "Target Language ISO code",
-                                              Source);
-                    Target := ReplaceTermInTranslation(Target);
-                    Validate(Target);
+                    Project.get(Rec."Project Code");
+                    Rec.Target := GoogleTranslate.Translate(Project."Source Language ISO code",
+                                              Rec."Target Language ISO code",
+                                              Rec.Source);
+                    Rec.Target := ReplaceTermInTranslation(Rec.Target);
+                    Rec.Validate(Target);
                 end;
             }
             action("Translate All")
@@ -101,10 +99,7 @@ page 78603 "BAC Translation Target List"
                 ApplicationArea = All;
                 Caption = 'Translate All';
                 Image = Translations;
-                Promoted = true;
-                PromotedOnly = true;
                 Enabled = ShowTranslate;
-                PromotedCategory = Process;
 
                 trigger OnAction();
                 var
@@ -124,13 +119,10 @@ page 78603 "BAC Translation Target List"
                 ApplicationArea = All;
                 Caption = 'Select All';
                 Image = Approve;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 var
-                    WarningTxt: Label 'Mark all untranslated lines to be translated?';
                     TransTarget: Record "BAC Translation Target";
+                    WarningTxt: Label 'Mark all untranslated lines to be translated?';
                 begin
                     CurrPage.SetSelectionFilter(TransTarget);
                     if TransTarget.Count = 1 then
@@ -147,12 +139,9 @@ page 78603 "BAC Translation Target List"
                 Caption = 'Select Empty Translations';
                 Image = SelectEntries;
                 ApplicationArea = All;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 begin
-                    SetRange(Target, '');
+                    Rec.SetRange(Target, '');
                 end;
             }
             action("Deselect All")
@@ -160,13 +149,10 @@ page 78603 "BAC Translation Target List"
                 ApplicationArea = All;
                 Caption = 'Deselect All';
                 Image = Cancel;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 var
-                    WarningTxt: Label 'Remove mark from all lines and disable translation?';
                     TransTarget: Record "BAC Translation Target";
+                    WarningTxt: Label 'Remove mark from all lines and disable translation?';
                 begin
                     CurrPage.SetSelectionFilter(TransTarget);
                     if TransTarget.Count = 1 then
@@ -181,13 +167,10 @@ page 78603 "BAC Translation Target List"
                 ApplicationArea = All;
                 Caption = 'Clear All translations within filter';
                 Image = RemoveLine;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 var
-                    WarningTxt: Label 'Remove all translations?';
                     TransTarget: Record "BAC Translation Target";
+                    WarningTxt: Label 'Remove all translations?';
                 begin
                     CurrPage.SetSelectionFilter(TransTarget);
                     if TransTarget.Count = 1 then
@@ -201,9 +184,6 @@ page 78603 "BAC Translation Target List"
                 Caption = 'Translation Terms';
                 ApplicationArea = All;
                 Image = BeginningText;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 RunObject = page "BAC Translation terms";
                 RunPageLink = "Project Code" = field("Project Code"),
                             "Target Language" = field("Target Language");
@@ -213,27 +193,30 @@ page 78603 "BAC Translation Target List"
                 ApplicationArea = All;
                 Caption = 'Export Translation File';
                 Image = ExportFile;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 var
-                    WarningTxt: Label 'Export the Translation file?';
-                    ExportTranslation: XmlPort "BAC Export Translation Target";
-                    ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
                     TransProject: Record "BAC Translation Project";
+                    ExportTranslation: XmlPort "BAC Export Translation Target";
+                    ExportTranslationBC16: XmlPort "BAC Export Trans Target BC16";
+                    ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
+                    WarningTxt: Label 'Export the Translation file?';
                 begin
                     if Confirm(WarningTxt) then begin
-                        TransProject.get("Project Code");
+                        TransProject.get(Rec."Project Code");
                         case TransProject."NAV Version" of
-                            TransProject."NAV Version"::"Dynamics 365 Business Central":
+                            TransProject."NAV Version"::"Business Central ->BC15":
                                 begin
-                                    ExportTranslation.SetProjectCode("Project Code", TransProject."Source Language ISO code", "Target Language ISO code");
+                                    ExportTranslation.SetProjectCode(Rec."Project Code", TransProject."Source Language ISO code", Rec."Target Language ISO code");
                                     ExportTranslation.Run();
                                 end;
-                            TransProject."NAV Version"::"Dynamics NAV 2018":
+                            TransProject."NAV Version"::"Business Central >=BC16":
                                 begin
-                                    ExportTranslation2018.SetProjectCode("Project Code", TransProject."Source Language ISO code", "Target Language ISO code");
+                                    ExportTranslationBC16.SetProjectCode(Rec."Project Code", TransProject."Source Language ISO code", Rec."Target Language ISO code");
+                                    ExportTranslationBC16.Run();
+                                end;
+                            TransProject."NAV Version"::"Dynamics NAV (BC11)":
+                                begin
+                                    ExportTranslation2018.SetProjectCode(Rec."Project Code", TransProject."Source Language ISO code", Rec."Target Language ISO code");
                                     ExportTranslation2018.Run();
                                 end;
                         end;
@@ -245,9 +228,6 @@ page 78603 "BAC Translation Target List"
             {
                 Caption = 'Find Duplicates';
                 Image = Find;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 ApplicationArea = All;
 
                 trigger OnAction()
@@ -262,9 +242,6 @@ page 78603 "BAC Translation Target List"
             {
                 Caption = 'Update From Source';
                 Image = UpdateXML;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 ApplicationArea = All;
 
                 trigger OnAction()
@@ -277,9 +254,44 @@ page 78603 "BAC Translation Target List"
             }
 
         }
+        area(Promoted)
+        {
+            group(Category_Process)
+            {
+                actionref(Translate_Promoted; Translate)
+                {
+                }
+                actionref("Translate All_Promoted"; "Translate All")
+                {
+                }
+                actionref("Select All_Promoted"; "Select All")
+                {
+                }
+                actionref("Select Empty Translations_Promoted"; "Select Empty Translations")
+                {
+                }
+                actionref("Deselect All_Promoted"; "Deselect All")
+                {
+                }
+                actionref("Clear All translations_Promoted"; "Clear All translations")
+                {
+                }
+                actionref("Translation Terms_Promoted"; "Translation Terms")
+                {
+                }
+                actionref("Export Translation File_Promoted"; "Export Translation File")
+                {
+                }
+                actionref("Find Duplicates_Promoted"; "Find Duplicates")
+                {
+                }
+                actionref("Update From Source_Promoted"; "Update From Source")
+                {
+                }
+            }
+        }
     }
     var
-        [InDataSet]
         ShowTranslate: Boolean;
 
 
@@ -292,64 +304,64 @@ page 78603 "BAC Translation Target List"
         TransSetup.get();
         ShowTranslate := TransSetup."Use Free Google Translate";
 
-        TransSource.SetFilter("Project Code", GetFilter("Project Code"));
+        TransSource.SetFilter("Project Code", Rec.GetFilter("Project Code"));
         if TransSource.FindSet() then
             repeat
                 TransTarget.TransferFields(TransSource);
-                TransTarget."Target Language" := GetFilter("Target Language");
-                TransTarget."Target Language ISO code" := GetFilter("Target Language ISO code");
+                TransTarget."Target Language" := Rec.GetFilter("Target Language");
+                TransTarget."Target Language ISO code" := Rec.GetFilter("Target Language ISO code");
                 if TransTarget.Insert() then;
             until TransSource.Next() = 0;
     end;
 
     local procedure TranslateAll(inOnlyEmpty: Boolean)
     var
-        GoogleTranslate: Codeunit "BAC Google Translate Rest";
         TransTarget: Record "BAC Translation Target";
         TransTarget2: Record "BAC Translation Target";
         Project: Record "BAC Translation Project";
+        GoogleTranslate: Codeunit "BAC Google Translate Rest";
         Window: Dialog;
-        DialogTxt: Label 'Converting #1###### of #2######';
         Counter: Integer;
         TotalCount: Integer;
+        DialogTxt: Label 'Converting #1###### of #2######', comment = '#1 = Counter, #2 = Total Count';
     begin
         if inOnlyEmpty then
             TransTarget.SetRange(Target, '');
         TransTarget.SetRange(Translate, true);
-        TransTarget.SetRange("Project Code", "Project Code");
-        Project.get("Project Code");
+        TransTarget.SetRange("Project Code", Rec."Project Code");
+        Project.get(Rec."Project Code");
         TotalCount := TransTarget.Count;
         Window.Open(DialogTxt);
         TransTarget.SetRange(Occurrencies, 1);
-        if TransTarget.FindSet() then begin
+        if TransTarget.FindSet() then
             repeat
                 Counter += 1;
                 Window.Update(1, Counter);
                 Window.Update(2, TotalCount);
                 TransTarget.Target := GoogleTranslate.Translate(Project."Source Language ISO code",
-                                          "Target Language ISO code",
+                                          Rec."Target Language ISO code",
                                           TransTarget.Source);
                 TransTarget.Target := ReplaceTermInTranslation(TransTarget.Target);
                 TransTarget.Translate := false;
                 TransTarget.Modify();
                 commit();
             until TransTarget.Next() = 0;
-        end;
+
         // To avoid the Sorry message (Another user has change the record)
         TransTarget.Reset();
         if inOnlyEmpty then
             TransTarget.SetRange(Target, '');
         TransTarget.SetRange(Translate, true);
-        TransTarget.SetRange("Project Code", "Project Code");
+        TransTarget.SetRange("Project Code", Rec."Project Code");
         TransTarget.SetCurrentKey(Source);
         TransTarget.SetFilter(Occurrencies, '>1');
-        if TransTarget.FindSet() then begin
+        if TransTarget.FindSet() then
             repeat
                 Counter += 1;
                 Window.Update(1, Counter);
                 Window.Update(2, TotalCount);
                 TransTarget.Target := GoogleTranslate.Translate(Project."Source Language ISO code",
-                                          "Target Language ISO code",
+                                          Rec."Target Language ISO code",
                                           TransTarget.Source);
                 TransTarget.Target := ReplaceTermInTranslation(TransTarget.Target);
                 TransTarget2.SetFilter(Source, TransTarget.Source);
@@ -359,8 +371,6 @@ page 78603 "BAC Translation Target List"
                 SelectLatestVersion();
                 TransTarget.SetFilter(Source, '<>%1', TransTarget.Source);
             until TransTarget.Next() = 0;
-        end;
-
     end;
 
     local procedure ReplaceTermInTranslation(inTarget: Text[250]) outTarget: Text[250]
@@ -403,7 +413,7 @@ page 78603 "BAC Translation Target List"
         TransTargetDup: Record "BAC Translation Target";
         TransTargetTrans: Record "BAC Translation Target";
         Counter: Integer;
-        FinishedTxt: Label '%1 Duplicate captions found';
+        FinishedTxt: Label '%1 Duplicate captions found', Comment = '%1 = Counter';
     begin
         TransTarget.CopyFilters(Rec);
         TransTarget.SetRange(Target, '');
@@ -428,7 +438,7 @@ page 78603 "BAC Translation Target List"
         TransTarget: Record "BAC Translation Target";
         TransSource: Record "BAC Translation Source";
         Counter: Integer;
-        FinishedTxt: Label '%1 Source captions updated';
+        FinishedTxt: Label '%1 Source captions updated', Comment = '%1 = Counter';
     begin
         TransTarget.Modifyall(Translate, false);
         if TransSource.FindSet() then
@@ -451,3 +461,4 @@ page 78603 "BAC Translation Target List"
 
 
 }
+#pragma implicitwith restore

@@ -1,6 +1,6 @@
-xmlport 78606 "BAC Import Base Trans. Target"
+xmlport 78607 "BAC Import Base Trans Tgt 2018"
 {
-    Caption = 'Import Base Translation Target';
+    Caption = 'Import Base Translation Target 2018';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
@@ -9,7 +9,6 @@ xmlport 78606 "BAC Import Base Trans. Target"
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
     UseRequestPage = false;
-    UseLax = true;
 
     schema
     {
@@ -37,11 +36,12 @@ xmlport 78606 "BAC Import Base Trans. Target"
                 {
                     trigger OnAfterAssignVariable()
                     var
-                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3';
+                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3', Comment = '%1 = Project Source Language, %2 = Language ISO code, %3 = Source Langiage in file';
                     begin
                         if TransProject."Source Language ISO code" <> "source-language" then
                             error(WrongSourceLangTxt, TransProject.FieldCaption("Source Language"), TransProject."Source Language ISO code", "source-language");
                     end;
+
                 }
                 textattribute("target-language")
                 {
@@ -64,14 +64,16 @@ xmlport 78606 "BAC Import Base Trans. Target"
                         }
                         tableelement(Target; "BAC Base Translation Target")
                         {
-                            UseTemporary = true;
-                            AutoSave = true;
                             XmlName = 'trans-unit';
                             AutoReplace = true;
 
                             fieldattribute(id; Target."Trans-Unit Id")
                             {
                             }
+                            fieldattribute("maxWidth"; Target."Max Width")
+                            {
+                            }
+
                             textattribute("size-unit")
                             {
                                 trigger OnAfterAssignVariable()
@@ -147,13 +149,7 @@ xmlport 78606 "BAC Import Base Trans. Target"
                             end;
 
                             trigger OnAfterInsertRecord()
-                            var
-                                Target2: Record "BAC Base Translation Target";
                             begin
-                                Target2 := Target;
-                                if not Target2.Insert() then
-                                    Target2.Modify();
-
                                 if not XMLImported then
                                     XMLImported := true;
                             end;
@@ -165,16 +161,15 @@ xmlport 78606 "BAC Import Base Trans. Target"
     }
 
     var
+        TransProject: Record "BAC Translation Project";
+        TargetLanguage: Record "BAC Target Language";
+        TransNotes: Record "BAC Base Translation Notes";
         ProjectCode: Code[10];
         TargetLangCode: Code[10];
         TargetLangISOCode: Text[10];
         SourceLangISOCode: Text[10];
-        MissingProjNameTxt: Label 'Project Name is Missing';
-        TransNotes: Record "BAC Base Translation Notes";
-        TargetLanguage: Record "BAC Target Language";
-        TransTarget: Record "BAC Base Translation Target";
-        TransProject: Record "BAC Translation Project";
         XMLImported: Boolean;
+        MissingProjNameTxt: Label 'Project Name is Missing';
 
     procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
     begin
@@ -189,17 +184,13 @@ xmlport 78606 "BAC Import Base Trans. Target"
     end;
 
     local procedure CreateTranNote()
-    var
-        TransNotes2: Record "BAC Base Translation Notes";
     begin
         if (TransNotes.From <> '') and
            (TransNotes.Annotates <> '') and
            (TransNotes.Priority <> '') then begin
             TransNotes."Project Code" := ProjectCode;
             TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
-            TransNotes2 := TransNotes;
-            if not TransNotes.Insert() then
-                TransNotes2.Modify();
+            if TransNotes.Insert() then;
             clear(TransNotes);
         end;
     end;

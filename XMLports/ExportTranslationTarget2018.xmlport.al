@@ -175,7 +175,6 @@ xmlport 78604 "BAC Export Trans Target 2018"
         ProjectCode: Code[10];
         SourceTransCode: Text[10];
         TargetTransCode: Text[10];
-        MissingProjNameTxt: Label 'Project Name is Missing';
 
     trigger OnPreXmlPort()
     var

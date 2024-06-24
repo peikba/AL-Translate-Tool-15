@@ -1,16 +1,15 @@
-xmlport 78603 "BAC Import Trans. Source 2018"
+xmlport 78602 "BAC Import Translation Target"
 {
-    Caption = 'Import Translation Source 2018';
+    Caption = 'Import Translation Target';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
-    FileName = 'C:\Users\Peikba\Desktop\ManPlus.xml';
     XmlVersionNo = V10;
     Format = Xml;
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
     UseRequestPage = false;
-    UseLax = true;
+    UseLax = false;
 
     schema
     {
@@ -28,6 +27,7 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                 XmlName = 'file';
                 textattribute(datatype)
                 {
+                    XmlName = 'datatype';
                     trigger OnAfterAssignVariable()
                     begin
                         TransProject."File Datatype" := datatype;
@@ -36,17 +36,15 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                 }
                 textattribute("source-language")
                 {
-                    trigger OnAfterAssignVariable()
-                    var
-                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3';
-                    begin
-                        if TransProject."Source Language ISO code" <> "source-language" then
-                            error(WrongSourceLangTxt, TransProject.FieldCaption("Source Language"), TransProject."Source Language ISO code", "source-language");
-                    end;
-
+                    XmlName = 'source-language';
+                }
+                textattribute("target-language")
+                {
+                    XmlName = 'target-language';
                 }
                 textattribute(original)
                 {
+                    XmlName = 'original';
                     trigger OnAfterAssignVariable()
                     begin
                         TransProject.OrginalAttr := original;
@@ -54,6 +52,7 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                 }
                 textelement(body)
                 {
+                    XmlName = 'body';
                     textelement(group)
                     {
 
@@ -61,46 +60,53 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                         {
                             XmlName = 'id';
                         }
-                        tableelement(Source; "BAC Translation Source")
+                        tableelement(Target; "BAC Translation Target")
                         {
+                            UseTemporary = true;
+                            AutoSave = true;
                             XmlName = 'trans-unit';
                             AutoReplace = true;
 
-                            fieldattribute(id; Source."Trans-Unit Id")
+                            fieldattribute(id; Target."Trans-Unit Id")
                             {
-                            }
-                            fieldattribute("maxWidth"; Source."Max Width")
-                            {
+                                XmlName = 'id';
                             }
                             textattribute("size-unit")
                             {
+                                XmlName = 'size-unit';
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    Source."size-unit" := "size-unit";
+                                    Target."size-unit" := "size-unit";
                                 end;
                             }
                             textattribute(translate)
                             {
+                                XmlName = 'translate';
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    source.TranslateAttr := translate;
+                                    Target.TranslateAttr := translate;
                                 end;
                             }
                             textattribute("al-object-target")
                             {
+                                XmlName = 'al-object-target';
                                 Occurrence = Optional;
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    source."al-object-target" := "al-object-target";
+                                    target."al-object-target" := "al-object-target";
                                 end;
                             }
-                            fieldelement(source; Source.Source)
+
+                            fieldelement(source; Target.Source)
                             {
+                                XmlName = 'source';
                             }
 
-                            textelement(note)
+                            tableelement(TransNotes; "BAC Translation Notes")
                             {
                                 XmlName = 'note';
+                                UseTemporary = true;
+                                AutoSave = true;
                                 textattribute(from)
                                 {
                                     trigger OnAfterAssignVariable()
@@ -122,21 +128,52 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                                         TransNotes.Priority := priority;
                                     end;
                                 }
-                                trigger OnAfterAssignVariable()
+                                textattribute(note2)
+                                {
+                                    XmlName = 'note';
+                                    trigger OnAfterAssignVariable()
+                                    begin
+                                        TransNotes.Note := note2;
+                                    end;
+                                }
+                                trigger OnBeforeInsertRecord()
                                 begin
-                                    TransNotes.Note := note;
-                                    CreateTranNote();
+                                    TransNotes."Project Code" := ProjectCode;
+                                    TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
                                 end;
                             }
+                            fieldelement(target; Target.Target)
+                            {
+                                XmlName = 'target';
+                                textattribute(state)
+                                {
+                                    XmlName = 'state';
+                                    Occurrence = Optional;
+                                    trigger OnAfterAssignVariable()
+                                    begin
+                                        Target.State := state;
+                                    end;
+                                }
+
+                            }
+
                             trigger OnBeforeInsertRecord()
                             begin
                                 if ProjectCode = '' then
                                     error(MissingProjNameTxt);
-                                Source."Project Code" := ProjectCode;
+                                Target."Project Code" := ProjectCode;
+                                Target."Target Language ISO code" := TargetLangISOCode;
+                                Target."Target Language" := TargetLangCode;
                             end;
 
                             trigger OnAfterInsertRecord()
+                            var
+                                Target2: Record "BAC Translation Target";
                             begin
+                                Target2 := Target;
+                                if not Target2.Insert() then
+                                    Target2.Modify();
+
                                 if not XMLImported then
                                     XMLImported := true;
                             end;
@@ -148,37 +185,31 @@ xmlport 78603 "BAC Import Trans. Source 2018"
     }
 
     var
-        ProjectCode: Code[10];
-        MissingProjNameTxt: Label 'Project Name is Missing';
-        TransNotes: Record "BAC Translation Notes";
+
+        TargetLanguage: Record "BAC Target Language";
         TransProject: Record "BAC Translation Project";
-        DummyMaxWidth: Text;
+        ProjectCode: Code[10];
+        TargetLangCode: Code[10];
+        TargetLangISOCode: Text[10];
+        SourceLangISOCode: Text[10];
         XMLImported: Boolean;
+        MissingProjNameTxt: Label 'Project Name is Missing';
 
-    trigger OnPostXmlPort()
-    begin
-        TransProject."File Name" := currXMLport.Filename();
-        while (StrPos(TransProject."File Name", '\') > 0) do
-            FileName := CopyStr(TransProject."File Name", StrPos(TransProject."File Name", '\') + 1);
-        TransProject.Modify();
-    end;
-
-    procedure SetProjectCode(inProjectCode: Code[10])
+    procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
     begin
         ProjectCode := inProjectCode;
         TransProject.Get(ProjectCode);
+        TargetLangISOCode := inTargetLangISOCode;
+        SourceLangISOCode := inSourceLangISOCode;
+        TargetLanguage.Setrange("Project Code", ProjectCode);
+        TargetLanguage.Setrange("Target Language ISO code", TargetLangISOCode);
+        TargetLanguage.findfirst;
+        TargetLangCode := TargetLanguage."Target Language";
     end;
 
-    local procedure CreateTranNote()
+    procedure GetFileName(): Text;
     begin
-        if (TransNotes.From <> '') and
-           (TransNotes.Annotates <> '') and
-           (TransNotes.Priority <> '') then begin
-            TransNotes."Project Code" := ProjectCode;
-            TransNotes."Trans-Unit Id" := Source."Trans-Unit Id";
-            if TransNotes.Insert() then;
-            clear(TransNotes);
-        end;
+        exit(currXMLport.Filename);
     end;
 
     procedure FileImported(): Boolean

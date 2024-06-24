@@ -25,18 +25,6 @@ page 78614 "BAC Translation Role Center"
                 ApplicationArea = All;
             }
         }
-        // area(Sections)
-        // {
-        //     group(SectionsGroupName)
-        //     {
-        //         Caption = '';
-        //         action(SectionsAction)
-        //         {
-        //             ApplicationArea=All;
-        //             //RunObject = Page ObjectName;
-        //         }
-        //     }
-        // }
         area(Embedding)
         {
             action("Translation Projects")

@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78610 "BAC AL Logo FactBox"
 {
     PageType = CardPart;
@@ -12,7 +13,7 @@ page 78610 "BAC AL Logo FactBox"
             group(GroupName)
             {
                 ShowCaption = false;
-                field(Logo; Logo)
+                field(Logo; Rec.Logo)
                 {
                     ApplicationArea = All;
                     ShowCaption = false;
@@ -21,3 +22,4 @@ page 78610 "BAC AL Logo FactBox"
         }
     }
 }
+#pragma implicitwith restore

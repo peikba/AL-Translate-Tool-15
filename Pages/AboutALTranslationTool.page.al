@@ -24,16 +24,19 @@ page 78609 "BAC About AL Translation Tool"
                     ShowCaption = false;
                     field("Version"; AppVersion)
                     {
+                        Caption='Version';
                         ApplicationArea = All;
                         Editable = false;
                     }
                     field(AppName; AppName)
                     {
+                        Caption='App Name';
                         ApplicationArea = All;
                         Editable = false;
                     }
                     field(AppPublisher; AppPublisher)
                     {
+                        Caption='App Publisher';
                         ApplicationArea = All;
                         Editable = false;
                     }

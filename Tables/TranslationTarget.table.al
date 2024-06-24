@@ -85,17 +85,26 @@ table 78602 "BAC Translation Target"
         {
             Caption = 'Occurrencies';
             FieldClass = FlowField;
-            CalcFormula = count ("BAC Translation Target" where(Source = field(Source)));
+            CalcFormula = count("BAC Translation Target" where(Source = field(Source)));
         }
         field(140; "Field Name"; Text[250])
         {
             Caption = 'Field Name';
             FieldClass = FlowField;
-            CalcFormula = lookup ("BAC Translation Notes".Note where("Project Code" = field("Project Code"),
+            CalcFormula = lookup("BAC Translation Notes".Note where("Project Code" = field("Project Code"),
                                                              "Trans-Unit Id" = field("Trans-Unit Id"),
                                                              From = const('Xliff Generator')));
         }
-
+        field(150; State; Text[100])
+        {
+            DataClassification = AccountData;
+            Caption = 'State';
+        }
+        field(160; Note; Text[100])
+        {
+            DataClassification = AccountData;
+            Caption = 'Note';
+        }
     }
 
     keys

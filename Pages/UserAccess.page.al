@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78612 "BAC User Access"
 {
     Caption = 'User Access';
@@ -12,22 +13,22 @@ page 78612 "BAC User Access"
         {
             repeater(GroupName)
             {
-                field("Project Code"; "Project Code")
+                field("Project Code"; Rec."Project Code")
                 {
                     ApplicationArea = All;
 
                 }
-                field("User Id"; "User Id")
+                field("User Id"; Rec."User Id")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Project Name"; "Project Name")
+                field("Project Name"; Rec."Project Name")
                 {
                     ApplicationArea = All;
 
                 }
-                field("User Name"; "User Name")
+                field("User Name"; Rec."User Name")
                 {
                     ApplicationArea = All;
 
@@ -40,8 +41,9 @@ page 78612 "BAC User Access"
         UserAccess: Record "BAC User Access";
         NoAccessTxt: Label 'No Access';
     begin
-        UserAccess.SetRange("User Id", "User Id");
+        UserAccess.SetRange("User Id", Rec."User Id");
         if not UserAccess.IsEmpty then
             Error(NoAccessTxt)
     end;
 }
+#pragma implicitwith restore

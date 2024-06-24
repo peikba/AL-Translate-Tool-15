@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78605 "BAC Trans Target Factbox"
 {
     PageType = CardPart;
@@ -49,7 +50,7 @@ page 78605 "BAC Trans Target Factbox"
     var
         Target: Record "BAC Translation Target";
     begin
-        Target.SetRange("Project Code", "Project Code");
+        Target.SetRange("Project Code", Rec."Project Code");
         TotalCaptions := Target.Count;
         Target.SetRange(Source, '');
         TotalMissingCaptions := Target.Count;
@@ -62,8 +63,9 @@ page 78605 "BAC Trans Target Factbox"
     var
         TransTarget: Record "BAC Translation Target";
     begin
-        TransTarget.SetRange(Source, Source);
+        TransTarget.SetRange(Source, Rec.Source);
         Instances := TransTarget.Count;
     end;
 
 }
+#pragma implicitwith restore

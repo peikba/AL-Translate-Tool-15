@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78611 "BAC Languages"
 {
     Caption = 'Languages (Translate Module)';
@@ -13,23 +14,23 @@ page 78611 "BAC Languages"
             repeater(GroupName)
             {
 
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
                     ApplicationArea = All;
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
                 }
-                field("Windows Language ID"; "Windows Language ID")
+                field("Windows Language ID"; Rec."Windows Language ID")
                 {
                     ApplicationArea = All;
                 }
-                field("Windows Language Name"; "Windows Language Name")
+                field("Windows Language Name"; Rec."Windows Language Name")
                 {
                     ApplicationArea = All;
                 }
-                field("BAC ISO code"; "BAC ISO code")
+                field("BAC ISO code"; Rec."BAC ISO code")
                 {
                     ApplicationArea = All;
                 }
@@ -37,3 +38,4 @@ page 78611 "BAC Languages"
         }
     }
 }
+#pragma implicitwith restore

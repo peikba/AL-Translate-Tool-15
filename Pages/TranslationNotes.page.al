@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78604 "BAC Translation Notes"
 {
     PageType = Listpart;
@@ -11,21 +12,21 @@ page 78604 "BAC Translation Notes"
         {
             repeater(GroupName)
             {
-                field(From; From)
+                field(From; Rec.From)
                 {
                     ApplicationArea = All;
 
                 }
-                field(Annotates; Annotates)
+                field(Annotates; Rec.Annotates)
                 {
                     ApplicationArea = All;
 
                 }
-                field(Note; Note)
+                field(Note; Rec.Note)
                 {
                     ApplicationArea = All;
                 }
-                field(Priority; Priority)
+                field(Priority; Rec.Priority)
                 {
                     ApplicationArea = All;
                     Visible = false;
@@ -34,3 +35,4 @@ page 78604 "BAC Translation Notes"
         }
     }
 }
+#pragma implicitwith restore

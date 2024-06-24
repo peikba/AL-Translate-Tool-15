@@ -1,14 +1,16 @@
-xmlport 78605 "BAC Import Trans Target 2018"
+xmlport 78600 "BAC Import Translation Source"
 {
-    Caption = 'Import Translation Target 2018';
+    Caption = 'Import Translation Source';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
+    FileName = 'C:\Users\Peikba\Desktop\ManPlus.xml';
     XmlVersionNo = V10;
     Format = Xml;
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
     UseRequestPage = false;
+    UseLax = true;
 
     schema
     {
@@ -36,15 +38,18 @@ xmlport 78605 "BAC Import Trans Target 2018"
                 {
                     trigger OnAfterAssignVariable()
                     var
-                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3';
+                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3', Comment = '%1 = Project Source Language, %2 = Language ISO code, %3 = Source Langiage in file';
                     begin
                         if TransProject."Source Language ISO code" <> "source-language" then
                             error(WrongSourceLangTxt, TransProject.FieldCaption("Source Language"), TransProject."Source Language ISO code", "source-language");
                     end;
-
                 }
                 textattribute("target-language")
                 {
+                    trigger OnAfterAssignVariable()
+                    begin
+                        TransProject."Target Language" := "target-language";
+                    end;
                 }
                 textattribute(original)
                 {
@@ -62,42 +67,42 @@ xmlport 78605 "BAC Import Trans Target 2018"
                         {
                             XmlName = 'id';
                         }
-                        tableelement(Target; "BAC Translation Target")
+                        tableelement(Source; "BAC Translation Source")
                         {
                             XmlName = 'trans-unit';
                             AutoReplace = true;
 
-                            fieldattribute(id; Target."Trans-Unit Id")
+                            fieldattribute(id; Source."Trans-Unit Id")
                             {
                             }
-                            fieldattribute("maxWidth"; Target."Max Width")
-                            {
-                            }
-
                             textattribute("size-unit")
                             {
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    Target."size-unit" := "size-unit";
+                                    Source."size-unit" := "size-unit";
                                 end;
                             }
                             textattribute(translate)
                             {
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    Target.TranslateAttr := translate;
+                                    source.TranslateAttr := translate;
                                 end;
+                            }
+                            textattribute("xml")
+                            {
+                                Occurrence = Optional;
+
                             }
                             textattribute("al-object-target")
                             {
                                 Occurrence = Optional;
                                 trigger OnAfterAssignVariable()
                                 begin
-                                    target."al-object-target" := "al-object-target";
+                                    source."al-object-target" := "al-object-target";
                                 end;
                             }
-
-                            fieldelement(source; Target.Source)
+                            fieldelement(source; Source.Source)
                             {
                             }
 
@@ -125,27 +130,17 @@ xmlport 78605 "BAC Import Trans Target 2018"
                                         TransNotes.Priority := priority;
                                     end;
                                 }
-                                textattribute(note2)
-                                {
-                                    XmlName = 'note';
-                                    trigger OnAfterAssignVariable()
-                                    begin
-                                        TransNotes.Note := note2;
-                                        CreateTranNote();
-                                    end;
-                                }
+                                trigger OnAfterAssignVariable()
+                                begin
+                                    TransNotes.Note := note;
+                                    CreateTranNote();
+                                end;
                             }
-                            fieldelement(target; Target.Target)
-                            {
-                            }
-
                             trigger OnBeforeInsertRecord()
                             begin
                                 if ProjectCode = '' then
                                     error(MissingProjNameTxt);
-                                Target."Project Code" := ProjectCode;
-                                Target."Target Language ISO code" := TargetLangISOCode;
-                                Target."Target Language" := TargetLangCode;
+                                Source."Project Code" := ProjectCode;
                             end;
 
                             trigger OnAfterInsertRecord()
@@ -161,27 +156,24 @@ xmlport 78605 "BAC Import Trans Target 2018"
     }
 
     var
-        ProjectCode: Code[10];
-        TargetLangCode: Code[10];
-        TargetLangISOCode: Text[10];
-        SourceLangISOCode: Text[10];
-        MissingProjNameTxt: Label 'Project Name is Missing';
-        TransNotes: Record "BAC Translation Notes";
-        TargetLanguage: Record "BAC Target Language";
-        TransTarget: Record "BAC Translation Target";
         TransProject: Record "BAC Translation Project";
+        TransNotes: Record "BAC Translation Notes";
+        ProjectCode: Code[10];
         XMLImported: Boolean;
+        MissingProjNameTxt: Label 'Project Name is Missing';
 
-    procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
+    trigger OnPostXmlPort()
+    begin
+        TransProject."File Name" := currXMLport.Filename();
+        while (StrPos(TransProject."File Name", '\') > 0) do
+            FileName := CopyStr(TransProject."File Name", StrPos(TransProject."File Name", '\') + 1);
+        TransProject.Modify();
+    end;
+
+    procedure SetProjectCode(inProjectCode: Code[10])
     begin
         ProjectCode := inProjectCode;
         TransProject.Get(ProjectCode);
-        TargetLangISOCode := inTargetLangISOCode;
-        SourceLangISOCode := inSourceLangISOCode;
-        TargetLanguage.Setrange("Project Code", ProjectCode);
-        TargetLanguage.Setrange("Target Language ISO code", TargetLangISOCode);
-        TargetLanguage.findfirst;
-        TargetLangCode := TargetLanguage."Target Language";
     end;
 
     local procedure CreateTranNote()
@@ -190,15 +182,10 @@ xmlport 78605 "BAC Import Trans Target 2018"
            (TransNotes.Annotates <> '') and
            (TransNotes.Priority <> '') then begin
             TransNotes."Project Code" := ProjectCode;
-            TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
+            TransNotes."Trans-Unit Id" := Source."Trans-Unit Id";
             if TransNotes.Insert() then;
             clear(TransNotes);
         end;
-    end;
-
-    procedure GetFileName(): Text;
-    begin
-        exit(currXMLport.Filename);
     end;
 
     procedure FileImported(): Boolean

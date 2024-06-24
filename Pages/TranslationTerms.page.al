@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78606 "BAC Translation Terms"
 {
     Caption = 'Translation Terms';
@@ -13,12 +14,12 @@ page 78606 "BAC Translation Terms"
         {
             repeater(GroupName)
             {
-                field(Term; Term)
+                field(Term; Rec.Term)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enter the term to hardcode for translation. E.g. ''Journal'' must be translated to ''Worksheet''. Every instance of the term will be replaced with the translation.';
                 }
-                field(Translation; Translation)
+                field(Translation; Rec.Translation)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enter the translation to be inserted for the term. E.g. ''Journal'' must be translated to ''Worksheet''. Every instance of the term will be replaced with the translation.';
@@ -36,20 +37,17 @@ page 78606 "BAC Translation Terms"
                 ApplicationArea = All;
                 Caption = 'Copy From General Terms';
                 Image = ReminderTerms;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedIsBig = true;
 
                 trigger OnAction();
                 var
                     GenTransTerm: Record "BAC Gen. Translation Term";
                     TransTerm: Record "BAC Translation Term";
                 begin
-                    GenTransTerm.SetFilter("Target Language", "Target Language");
+                    GenTransTerm.SetFilter("Target Language", Rec."Target Language");
                     if GenTransTerm.FindSet() then
                         repeat
                             TransTerm.TransferFields(GenTransTerm);
-                            TransTerm."Project Code" := GetFilter("Project Code");
+                            TransTerm."Project Code" := Rec.GetFilter("Project Code");
                             if TransTerm.Insert() then;
                         until GenTransTerm.Next() = 0;
                 end;
@@ -58,9 +56,6 @@ page 78606 "BAC Translation Terms"
             {
                 ApplicationArea = All;
                 Caption = 'Add to General Terms';
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedIsBig = true;
                 Image = AddToHome;
 
                 trigger OnAction();
@@ -73,5 +68,18 @@ page 78606 "BAC Translation Terms"
                 end;
             }
         }
+        area(Promoted)
+        {
+            group(Category_New)
+            {
+                actionref("Copy From General Terms_Promoted"; "Copy From General Terms")
+                {
+                }
+                actionref("Add to General Terms_Promoted"; "Add to General Terms")
+                {
+                }
+            }
+        }
     }
 }
+#pragma implicitwith restore

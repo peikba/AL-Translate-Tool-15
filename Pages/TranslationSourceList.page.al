@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78601 "BAC Translation Source List"
 {
     PageType = List;
@@ -9,18 +10,18 @@ page 78601 "BAC Translation Source List"
         {
             repeater(GroupName)
             {
-                field("Field Name";"Field Name")
+                field("Field Name"; Rec."Field Name")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Trans-Unit Id"; "Trans-Unit Id")
+                field("Trans-Unit Id"; Rec."Trans-Unit Id")
                 {
                     ApplicationArea = All;
                     Visible=false;
 
                 }
-                field(Source; Source)
+                field(Source; Rec.Source)
                 {
                     ApplicationArea = All;
 
@@ -47,12 +48,9 @@ page 78601 "BAC Translation Source List"
                 Caption = 'Show Empty Captions';
                 ApplicationArea = All;
                 Image = ShowSelected;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 begin
-                    SetRange(Source, '');
+                    Rec.SetRange(Source, '');
                 end;
             }
             action("Show All Captions")
@@ -60,14 +58,24 @@ page 78601 "BAC Translation Source List"
                 Caption = 'Show All Captions';
                 ApplicationArea = All;
                 Image = ShowList;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 trigger OnAction()
                 begin
-                    SetRange(Source);
+                    Rec.SetRange(Source);
                 end;
+            }
+        }
+        area(Promoted)
+        {
+            group(Category_Process)
+            {
+                actionref("Show Empty Captions_Promoted"; "Show Empty Captions")
+                {
+                }
+                actionref("Show All Captions_Promoted"; "Show All Captions")
+                {
+                }
             }
         }
     }
 }
+#pragma implicitwith restore

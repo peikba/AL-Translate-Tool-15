@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78607 "BAC Translation Setup"
 {
     PageType = Card;
@@ -16,7 +17,7 @@ page 78607 "BAC Translation Setup"
             group(General)
             {
                 Caption = 'General';
-                field("Default Source Language code"; "Default Source Language code")
+                field("Default Source Language code"; Rec."Default Source Language code")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Source Languange to be defaulted on every project';
@@ -24,7 +25,7 @@ page 78607 "BAC Translation Setup"
             }
             group("Translate Tools")
             {
-                field("Use Free Google Translate"; "Use Free Google Translate")
+                field("Use Free Google Translate"; Rec."Use Free Google Translate")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Use the free Google API for translation. The limitation is that it is only possible to access the API a limited number of times each hour.';
@@ -34,7 +35,7 @@ page 78607 "BAC Translation Setup"
             group(Numbering)
             {
                 Caption = 'Numbering';
-                field("Project Nos."; "Project Nos.")
+                field("Project Nos."; Rec."Project Nos.")
                 {
                     ApplicationArea = All;
                     ToolTip = 'No. Series to be used with Projects';
@@ -58,19 +59,25 @@ page 78607 "BAC Translation Setup"
             {
                 RunObject = page "BAC About AL Translation Tool";
                 Image = AboutNav;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
                 ApplicationArea=All;
             }
 
         }
+        area(Promoted)
+        {
+            group(Category_Process)
+            {
+                actionref("About Al Translation Tool_Promoted"; "About Al Translation Tool")
+                {
+                }
+            }
+        }
     }
     trigger OnOpenPage()
     begin
-        if not get() then begin
-            init();
-            Insert();
+        if not Rec.get() then begin
+            Rec.init();
+            Rec.Insert();
         end;
         DownloadLogo();
     end;
@@ -80,15 +87,16 @@ page 78607 "BAC Translation Setup"
         InStr: InStream;
         Client: HttpClient;
         Response: HttpResponseMessage;
-        Url: Label 'http://ba-consult.dk/downloads/Translate.jpg';
+        UrlLbl: Label 'http://ba-consult.dk/downloads/Translate.jpg';
     begin
-        if (Logo.Count() = 0) then begin
-            Client.Get(Url, Response);
+        if (Rec.Logo.Count() = 0) then begin
+            Client.Get(UrlLbl, Response);
             Response.Content().ReadAs(InStr);
-            clear(Logo);
+            clear(Rec.Logo);
             if rec.Logo.Count = 0 then
                 rec."Logo".ImportStream(InStr, 'Default image');
             CurrPage.Update(true);
         end;
     end;
 }
+#pragma implicitwith restore

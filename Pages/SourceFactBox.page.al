@@ -39,7 +39,7 @@ page 78615 "BAC Trans Source Factbox"
     var
         Source: Record "BAC Translation Source";
     begin
-        Source.SetRange("Project Code", "Project Code");
+        Source.SetRange("Project Code", Rec."Project Code");
         TotalCaptions := Source.Count;
         Source.SetRange(Source, '');
         TotalMissingCaptions := Source.Count;

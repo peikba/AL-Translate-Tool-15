@@ -1,6 +1,6 @@
-xmlport 78607 "BAC Import Base Trans Tgt 2018"
+xmlport 78609 "BAC Import Trans Target BC16"
 {
-    Caption = 'Import Base Translation Target 2018';
+    Caption = 'Import Translation Target BC16';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
@@ -9,6 +9,7 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
     UseRequestPage = false;
+    UseLax = true;
 
     schema
     {
@@ -16,6 +17,7 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
         {
             textattribute(version)
             {
+                XmlName = 'version';
                 trigger OnAfterAssignVariable()
                 begin
                     TransProject."Xliff Version" := version;
@@ -34,17 +36,18 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                 }
                 textattribute("source-language")
                 {
+                    XmlName = 'source-language';
                     trigger OnAfterAssignVariable()
                     var
-                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3';
+                        WrongSourceLangTxt: Label '%1 must be %2 in file - The file %1 is %3', comment = '%1=source-language, %2="Source Language ISO code", %3=source-language';
                     begin
                         if TransProject."Source Language ISO code" <> "source-language" then
                             error(WrongSourceLangTxt, TransProject.FieldCaption("Source Language"), TransProject."Source Language ISO code", "source-language");
                     end;
-
                 }
                 textattribute("target-language")
                 {
+                    XmlName = 'target-language';
                 }
                 textattribute(original)
                 {
@@ -55,6 +58,7 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                 }
                 textelement(body)
                 {
+                    XmlName = 'body';
                     textelement(group)
                     {
 
@@ -62,20 +66,20 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                         {
                             XmlName = 'id';
                         }
-                        tableelement(Target; "BAC Base Translation Target")
+                        tableelement(Target; "BAC Translation Target")
                         {
+                            UseTemporary = true;
+                            AutoSave = true;
                             XmlName = 'trans-unit';
                             AutoReplace = true;
 
                             fieldattribute(id; Target."Trans-Unit Id")
                             {
+                                XmlName = 'id';
                             }
-                            fieldattribute("maxWidth"; Target."Max Width")
-                            {
-                            }
-
                             textattribute("size-unit")
                             {
+                                XmlName = 'size-unit';
                                 trigger OnAfterAssignVariable()
                                 begin
                                     Target."size-unit" := "size-unit";
@@ -83,6 +87,7 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                             }
                             textattribute(translate)
                             {
+                                XmlName = 'translate';
                                 trigger OnAfterAssignVariable()
                                 begin
                                     Target.TranslateAttr := translate;
@@ -90,6 +95,7 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                             }
                             textattribute("al-object-target")
                             {
+                                XmlName = 'al-object-target';
                                 Occurrence = Optional;
                                 trigger OnAfterAssignVariable()
                                 begin
@@ -99,13 +105,29 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
 
                             fieldelement(source; Target.Source)
                             {
+                                XmlName = 'source';
+                            }
+                            fieldelement(target; Target.Target)
+                            {
+                                XmlName = 'target';
+                                textattribute(state)
+                                {
+                                    XmlName = 'state';
+                                    Occurrence = Optional;
+                                    trigger OnAfterAssignVariable()
+                                    begin
+                                        Target.State := state;
+                                    end;
+                                }
                             }
 
                             textelement(note)
                             {
                                 XmlName = 'note';
+
                                 textattribute(from)
                                 {
+                                    XmlName = 'from';
                                     trigger OnAfterAssignVariable()
                                     begin
                                         TransNotes.From := from;
@@ -113,6 +135,7 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                                 }
                                 textattribute(annotates)
                                 {
+                                    XmlName = 'annotates';
                                     trigger OnAfterAssignVariable()
                                     begin
                                         TransNotes.Annotates := annotates;
@@ -120,23 +143,14 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                                 }
                                 textattribute(priority)
                                 {
+                                    XmlName = 'priority';
                                     trigger OnAfterAssignVariable()
                                     begin
                                         TransNotes.Priority := priority;
-                                    end;
-                                }
-                                textattribute(note2)
-                                {
-                                    XmlName = 'note';
-                                    trigger OnAfterAssignVariable()
-                                    begin
-                                        TransNotes.Note := note2;
+                                        TransNotes.Note := note;
                                         CreateTranNote();
                                     end;
                                 }
-                            }
-                            fieldelement(target; Target.Target)
-                            {
                             }
 
                             trigger OnBeforeInsertRecord()
@@ -149,7 +163,13 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
                             end;
 
                             trigger OnAfterInsertRecord()
+                            var
+                                Target2: Record "BAC Translation Target";
                             begin
+                                Target2 := Target;
+                                if not Target2.Insert() then
+                                    Target2.Modify();
+
                                 if not XMLImported then
                                     XMLImported := true;
                             end;
@@ -161,10 +181,9 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
     }
 
     var
-        TransProject: Record "BAC Translation Project";
-        TransTarget: Record "BAC Base Translation Target";
+        TransNotes: Record "BAC Translation Notes";
         TargetLanguage: Record "BAC Target Language";
-        TransNotes: Record "BAC Base Translation Notes";
+        TransProject: Record "BAC Translation Project";
         ProjectCode: Code[10];
         TargetLangCode: Code[10];
         TargetLangISOCode: Text[10];
@@ -185,13 +204,17 @@ xmlport 78607 "BAC Import Base Trans Tgt 2018"
     end;
 
     local procedure CreateTranNote()
+    var
+        TransNotes2: Record "BAC Translation Notes";
     begin
         if (TransNotes.From <> '') and
            (TransNotes.Annotates <> '') and
            (TransNotes.Priority <> '') then begin
             TransNotes."Project Code" := ProjectCode;
             TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
-            if TransNotes.Insert() then;
+            TransNotes2 := TransNotes;
+            if not TransNotes.Insert() then
+                TransNotes2.Modify();
             clear(TransNotes);
         end;
     end;

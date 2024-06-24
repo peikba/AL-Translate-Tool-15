@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Your own server",
+            "name": "Local BC230",
             "type": "al",
             "request": "launch",
             "server": "http://localhost",
-            "serverInstance": "BC150",
+            "serverInstance": "BC230",
             "authentication": "Windows",
             "breakOnError": true,
             "breakOnRecordWrite": false,
