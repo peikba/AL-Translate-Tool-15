@@ -684,8 +684,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Target Language List - Action Import Target - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 698160755 - Action 1246357720 - Method 1377591017 - NamedType 2652709917" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This will overwrite existing Translation Target entries for %1</source>
-          <note from="Developer" annotates="general" priority="2">%1 = Language Code</note>
+          <source>This will overwrite existing Translation Target entries for %1 in %2 format</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Language Code, %2 = Format</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Target Language List - Action Import Target - Method OnAction - NamedType DeleteWarningTxt</note>
         </trans-unit>
         <trans-unit id="Page 698160755 - Action 1246357720 - Method 1377591017 - NamedType 3681552984" size-unit="char" translate="yes" xml:space="preserve">

@@ -84,7 +84,7 @@ page 78602 "BAC Target Language List"
                 var
                     TransProject: Record "BAC Translation Project";
                     ExportTranslation: XmlPort "BAC Export Translation Target";
-                    ExportTranslationBC21: XmlPort "BAC Export Trans Target BC16";
+                    ExportTranslationBC16: XmlPort "BAC Export Trans Target BC16";
                     ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
                     WarningTxt: Label 'Export the Translation file?';
                 begin
@@ -98,8 +98,8 @@ page 78602 "BAC Target Language List"
                                 end;
                             TransProject."NAV Version"::"Business Central >=BC16":
                                 begin
-                                    ExportTranslationBC21.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
-                                    ExportTranslationBC21.Run();
+                                    ExportTranslationBC16.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
+                                    ExportTranslationBC16.Run();
                                 end;
                             TransProject."NAV Version"::"Dynamics NAV (BC11)":
                                 begin
@@ -126,14 +126,14 @@ page 78602 "BAC Target Language List"
                     ImportTargetBC21: XmlPort "BAC Import Trans Target BC16";
                     ImportTarget2018: XmlPort "BAC Import Trans Target 2018";
                     FileName: Text;
-                    DeleteWarningTxt: Label 'This will overwrite existing Translation Target entries for %1', Comment = '%1 = Language Code';
+                    DeleteWarningTxt: Label 'This will overwrite existing Translation Target entries for %1 in %2 format', Comment = '%1 = Language Code, %2 = Format';
                     ImportedTxt: Label 'The file %1 has been imported into project %2', comment = '%1 = File Name, %2 = Project Code';
                 begin
+                    TransProject.get(Rec."Project Code");
                     TransTarget.SetRange("Project Code", Rec."Project Code");
                     if not TransTarget.IsEmpty then
-                        if not Confirm(DeleteWarningTxt, false, Rec."Project Code") then
+                        if not Confirm(DeleteWarningTxt, false, Rec."Project Code", TransProject."NAV Version") then
                             exit;
-                    TransProject.get(Rec."Project Code");
                     case TransProject."NAV Version" of
                         TransProject."NAV Version"::"Business Central ->BC15":
                             begin

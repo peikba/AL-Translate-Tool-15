@@ -99,29 +99,86 @@ xmlport 78601 "BAC Export Translation Target"
                                 XmlName = 'source';
                             }
 
-                            tableelement(note; "BAC Translation Notes")
+                            textelement(note)
                             {
-                                LinkTable = Target;
-                                LinkFields = "Project Code" = field("Project Code"), "Trans-Unit Id" = field("Trans-Unit Id");
 
-                                fieldattribute(from; note.From)
+                                textattribute(from)
                                 {
+                                    XmlName = 'from';
+                                    trigger OnBeforePassVariable()
+                                    begin
+                                        GetTransNote(1);
+                                        from := TransNotes.From;
+                                        note := Target.Note;
+                                    end;
                                 }
-                                fieldattribute(annotates; note.Annotates)
+                                textattribute(annotates)
                                 {
+                                    XmlName = 'annotates';
+                                    trigger OnBeforePassVariable()
+                                    begin
+                                        annotates := TransNotes."Annotates";
+                                    end;
                                 }
-                                fieldattribute(priority; note.Priority)
+                                textattribute(priority)
                                 {
+                                    XmlName = 'priority';
+                                    trigger OnBeforePassVariable()
+                                    begin
+                                        priority := TransNotes."Priority";
+                                    end;
                                 }
-                                fieldattribute(note; note.Note)
-                                {
-
-                                }
+                                trigger OnBeforePassVariable()
+                                begin
+                                    note := GetTransNote(1);
+                                    if note = '' then
+                                        exit;
+                                end;
                             }
-                            fieldelement(Target; Target.Target)
+                        }
+                        textelement(note2)
+                        {
+                            XmlName = 'note';
+                            textattribute(from2)
                             {
-                                XmlName = 'target';
+                                XmlName = 'from';
+                                trigger OnBeforePassVariable()
+                                begin
+                                    GetTransNote(2);
+                                    from2 := TransNotes.From;
+                                    note2 := Target.Note;
+                                end;
                             }
+                            textattribute(annotates2)
+                            {
+                                XmlName = 'annotates';
+                                trigger OnBeforePassVariable()
+                                begin
+                                    annotates2 := TransNotes."Annotates";
+                                end;
+                            }
+                            textattribute(priority2)
+                            {
+                                XmlName = 'priority';
+                                trigger OnBeforePassVariable()
+                                begin
+                                    priority2 := TransNotes."Priority";
+                                end;
+                            }
+                            trigger OnBeforePassVariable()
+                            begin
+                                note2 := GetTransNote(2);
+                                if note2 = '' then
+                                    exit;
+                            end;
+                        }
+                        textelement(NoteTarget)
+                        {
+                            XmlName = 'target';
+                            trigger OnBeforePassVariable()
+                            begin
+                                Notetarget := Target.Target;
+                            end;
                         }
                     }
                 }
@@ -160,16 +217,21 @@ xmlport 78601 "BAC Export Translation Target"
         TargetTransCode := InTargetLang;
     end;
 
-    local procedure CreateTranNote()
+    local procedure GetTransNote(inNoteNumber: Integer): Text
     begin
-        if (TransNotes.From <> '') and
-           (TransNotes.Annotates <> '') and
-           (TransNotes.Priority <> '') then begin
-            TransNotes."Project Code" := ProjectCode;
-            TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
-            if TransNotes.Insert() then;
-            clear(TransNotes);
+        TransNotes.Init();
+        TransNotes.SetRange("Project Code", ProjectCode);
+        TransNotes.SetRange("Trans-Unit Id", Target."Trans-Unit Id");
+        case inNoteNumber of
+            1:
+                TransNotes.SetRange(From, 'Developer');
+
+            2:
+                TransNotes.SetRange(From, 'Xliff Generator');
         end;
+        if not TransNotes.FindSet() then
+            exit('');
+        exit(TransNotes.Note);
     end;
 }
 
