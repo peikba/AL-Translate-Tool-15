@@ -18,10 +18,17 @@ page 78600 "BAC Trans Project List"
                 {
                     ApplicationArea = All;
                     AssistEdit = true;
+                    DrillDown = true;
+
                     trigger OnAssistEdit();
                     begin
                         if Rec.AssistEdit then
                             CurrPage.Update;
+                    end;
+
+                    trigger OnDrillDown()
+                    begin
+                        Rec.OpenTranslationTargetPage();
                     end;
 
                 }

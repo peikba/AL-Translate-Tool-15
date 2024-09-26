@@ -106,7 +106,10 @@ xmlport 78608 "BAC Export Trans Target BC16"
                                     XmlName = 'state';
                                     trigger OnBeforePassVariable()
                                     begin
-                                        state := Target.State;
+                                        if Target.Target = '' then
+                                            state := Target.State
+                                        else
+                                            state := '';
                                     end;
                                 }
                             }

@@ -9,6 +9,7 @@ table 78600 "BAC Translation Project"
         {
             Caption = 'Project Code';
             DataClassification = SystemMetadata;
+
             trigger OnValidate();
             var
                 TransSetup: Record "BAC Translation Setup";
@@ -192,5 +193,17 @@ table 78600 "BAC Translation Project"
             Rec := TransProject;
             exit(true);
         end;
+    end;
+
+    procedure OpenTranslationTargetPage()
+    var
+        TargetLanguage: Record "BAC Target Language";
+        TargetLanguageList: page "BAC Target Language List";
+    begin
+        TargetLanguage.SetRange("Project Code", Rec."Project Code");
+        TargetLanguage.SetRange("Source Language", Rec."Source Language");
+        TargetLanguage.SetRange("Source Language ISO code", "Source Language ISO code");
+        TargetLanguageList.SetTableView(TargetLanguage);
+        TargetLanguageList.RunModal();
     end;
 }

@@ -456,9 +456,6 @@ page 78603 "BAC Translation Target List"
                     until TransTarget.Next() = 0;
             until TransSource.Next() = 0;
         message(FinishedTxt, Counter);
-
     end;
-
-
 }
 #pragma implicitwith restore
