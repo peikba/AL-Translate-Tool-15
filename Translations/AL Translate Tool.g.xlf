@@ -790,7 +790,7 @@
         </trans-unit>
         <trans-unit id="Page 1234537804 - Method 716454850 - NamedType 3000237538" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1..%2</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">%1=From date filter, %2=To date filter</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Activities - Method OnOpenPage - NamedType DateFilterLbl</note>
         </trans-unit>
         <trans-unit id="Page 1234537804 - Control 3322269318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -827,6 +827,11 @@
           <source>Translation Role Center</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Role Center - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1493701240 - Action 4105827079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check File Structure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Role Center - Action CheckFileStructure - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1493701240 - Action 1514883969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation Setup</source>
@@ -1027,6 +1032,121 @@
           <source>No Access</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC User Access - Method OnOpenPage - NamedType NoAccessTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check File Structure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 4108155840" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check File Structure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType DianlogTitleLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 2767134993" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;trans-unit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xPathLblStart</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 2839411876" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;/trans-unit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xPathLblEnd</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 1166756693" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;target</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xTargetLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 2329651337" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;source</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xSourceLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 1775233129" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;xliff</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xXliffLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 279775768" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xFileLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 1897019567" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;group</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xGroupLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 2988350030" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;body</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xBodyLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 2470243810" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The source tag is missing the trans-unit Line %1\\%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Line No, %2=trans-unit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xSourceCodeMissingLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 908548865" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The source tag is double the trans-unit Line %1\\%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Line No, %2=trans-unit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xSourceCodeDoubleLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 1716401022" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The target tag is missing the trans-unit Line %1\\%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Line No, %2=trans-unit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xTargetCodeMissingLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 2097790077" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The target tag is double the trans-unit Line %1\\%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Line No, %2=trans-unit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xTargetCodeDoubleLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 1934664792" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The target tag should not be present in trans-unit Line %1\\%2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Line No, %2=trans-unit</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xTargetCodeInSourceLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 3275353817" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The file does not contain the %1 tag</source>
+          <note from="Developer" annotates="general" priority="2">%1=tag name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xCheckXliffFileLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 3513390059" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document is Ok</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType xDocumentOkLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Method 1544076788 - NamedType 1212506651" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1%2</source>
+          <note from="Developer" annotates="general" priority="2">1%= Text %3=Crlf</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Method OnPreReport - NamedType InsertLineTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - RequestPage 2516438534 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check the structure of an xliff file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - RequestPage RequestOptionsPage - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - RequestPage 2516438534 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check the structure of an xliff file</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - RequestPage RequestOptionsPage - Property AboutText</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Control 2532587914 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the import format.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Control ImportFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1192507071 - Control 2532587914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Format</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Check File Structure - Control ImportFormat - Property Caption</note>
         </trans-unit>
         <trans-unit id="XmlPort 2018434264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Export Translation Target 2018</source>

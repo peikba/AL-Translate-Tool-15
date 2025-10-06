@@ -24,6 +24,12 @@ page 78614 "BAC Translation Role Center"
                 RunObject = Page "BAC Translation Setup";
                 ApplicationArea = All;
             }
+            action(CheckFileStructure)
+            {
+                Caption = 'Check File Structure';
+                RunObject = report "BAC Check File Structure";
+                ApplicationArea = All;
+            }
         }
         area(Embedding)
         {

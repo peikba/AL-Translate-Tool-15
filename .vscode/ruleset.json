@@ -33,9 +33,9 @@
             "justification": "Rule is not currently understood."
         },
         {
-            "id": "AA0217",
+            "id": "AW0006",
             "action": "None",
-            "justification": "Rule is not currently understood."
+            "justification": "Pages should not be searchable"
         }
     ]
 }

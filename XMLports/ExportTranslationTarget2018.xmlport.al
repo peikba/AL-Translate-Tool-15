@@ -170,9 +170,9 @@ xmlport 78604 "BAC Export Trans Target 2018"
     }
 
     var
-        TransNotes: Record "BAC Translation Notes";
+        // TransNotes: Record "BAC Translation Notes";
         TransProject: Record "BAC Translation Project";
-        ProjectCode: Code[10];
+        // ProjectCode: Code[10];
         SourceTransCode: Text[10];
         TargetTransCode: Text[10];
 
@@ -194,21 +194,21 @@ xmlport 78604 "BAC Export Trans Target 2018"
     begin
         Target.SetRange("Project Code", inProjectCode);
         Target.SetRange("Target Language ISO code", InTargetLang);
-        ProjectCode := inProjectCode;
+        // ProjectCode := inProjectCode;
         SourceTransCode := InSourceLang;
         TargetTransCode := InTargetLang;
     end;
 
-    local procedure CreateTranNote()
-    begin
-        if (TransNotes.From <> '') and
-           (TransNotes.Annotates <> '') and
-           (TransNotes.Priority <> '') then begin
-            TransNotes."Project Code" := ProjectCode;
-            TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
-            if TransNotes.Insert() then;
-            clear(TransNotes);
-        end;
-    end;
+    // local procedure CreateTranNote()
+    // begin
+    //     if (TransNotes.From <> '') and
+    //        (TransNotes.Annotates <> '') and
+    //        (TransNotes.Priority <> '') then begin
+    //         TransNotes."Project Code" := ProjectCode;
+    //         TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
+    //         if TransNotes.Insert() then;
+    //         clear(TransNotes);
+    //     end;
+    // end;
 }
 

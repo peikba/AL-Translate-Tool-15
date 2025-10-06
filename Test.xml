@@ -1,0 +1,9 @@
+<trans-unit id="Report 2589418848 - Control 2985981120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+    <source>Archive Document</source>
+    <target>Arkiver dokument</target>
+    <target>ArkivŽ®r bilag</target>
+    <target>ArkivŽ®r dokument</target>
+    <note from="Developer" annotates="general" priority="2"></note>
+    <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control ArchiveDocumentCtrl - Property Caption</note>
+</trans-unit>
+

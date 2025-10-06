@@ -35,7 +35,4 @@ codeunit 78600 "BAC Google Translate Rest"
         HttpClient: HttpClient;
         ResponseMessage: HttpResponseMessage;
         TransText: text;
-        CurrencyRate: Record "Currency Exchange Rate" temporary;
-        Currency: Record Currency;
-        InvExchRate: Decimal;
 }

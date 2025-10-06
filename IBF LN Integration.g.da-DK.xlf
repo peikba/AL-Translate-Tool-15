@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="da-DK" original="IBF LN Integration.g.xlf">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 606356073 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF LN Setup</source>
+          <target>IBF LN Opsætning</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IBF_LNSetup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 606356073 - Field 2384746555 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Primary Key</source>
+          <target>Primærnøgle</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IBF_LNSetup - Field IBF_PrimaryKey - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 606356073 - Field 3856769681 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Use BranelRecipe</source>
+          <target>Brug Branel Recipe</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table IBF_LNSetup - Field IBF_UseBranelRecipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 606356073 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF LN Setup</source>
+          <target>INF LN Opsætning</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IBF_LNSetup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 606356073 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target>Generelt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IBF_LNSetup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 606356073 - Control 395510365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase</source>
+          <target>Køb</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IBF_LNSetup - Control Purchase - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 606356073 - Control 1406942772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales</source>
+          <target>Salg</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IBF_LNSetup - Control Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 606356073 - Control 3856769681 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to use Branel Recipe</source>
+          <target>Angiver, om Branel Recipe bruges</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page IBF_LNSetup - Control IBF_UseBranelRecipe - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Order Confirmation</source>
+          <target>IBF Ordrebekræftelse</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - NamedType 61938489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The filters have been changed. Do you want to send this email?</source>
+          <target>Filtre er ændret. Vil du sende denne mail ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - NamedType FiltersChangedQst</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 2805116850" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port not selected.</source>
+          <target>Custom Port not selected.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType CustomPortNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 1484961983" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer %1 not found!</source>
+          <target>Debitor %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType NoCustomerTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 971974403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order %1 not found!</source>
+          <target>Salgsordre %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType NoDocTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 51675927" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet E-Mail and Distribution Setup is empty for Customer %1</source>
+          <target>Lasernet Email og destinationer er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType NoEmailTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 3241611474" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Fax is empty for Customer %1</source>
+          <target>Lasernet Fax er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType NoFaxTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 1769129955" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GLN Code is empty for Customer %1</source>
+          <target>GLN er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType NoGLNCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Method 732692100 - NamedType 391171126" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Printer not selected</source>
+          <target>Printer ikke valgt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Method CheckPrintMethod - NamedType PrinterNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - ReportDataItem 1192395785 - Property 1806354803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order</source>
+          <target>Salgsordre</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - ReportDataItem Sales Header - Property RequestFilterHeading</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3138384927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Options</source>
+          <target>IBF Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control IBF Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3952502609 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancellation</source>
+          <target>Annullering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control Cancellation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3952502609 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cancellation</source>
+          <target>Annullering</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control Cancellation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 986914767 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control FullLoad - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 986914767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control FullLoad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2474057316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print with Price &amp; Amount</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintPriceAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2474057316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print with Price &amp; Amount</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintPriceAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1387837750 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Quantity (not ship qty.)</source>
+          <target>Udskriv antal (ikke levér antal)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintQuantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1387837750 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Quantity (not ship qty.)</source>
+          <target>Udskriv antal (ikke levér antal)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintQuantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2232713760 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Sum Lines</source>
+          <target>Udskriv sum linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintSumLine - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2232713760 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Sum Lines</source>
+          <target>Udskriv sum linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintSumLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1615282716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print VAT Total</source>
+          <target>Udskriv momstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintVATTotal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1615282716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print VAT Total</source>
+          <target>Udskriv momstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintVATTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 628589999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control Lasernet Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 429193913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Result.</source>
+          <target>Angiver Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control CheckResult - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 429193913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target>Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control CheckResult - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3269560157 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Custom Port.</source>
+          <target>Angiver Custom Port.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control CustomPortCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3269560157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port</source>
+          <target>Custom Port</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control CustomPortCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2415022345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailSend</source>
+          <target>EmailSend</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailOption - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2033851817 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailBCC.</source>
+          <target>Angiver Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailBCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2033851817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailBCC</source>
+          <target>Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailBCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1830626943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailCC.</source>
+          <target>Angiver Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1830626943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailCC</source>
+          <target>Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1716656471 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies ability to Edit Email Properties.</source>
+          <target>Angiver mulighed for at rette Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1716656471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit Email Properties</source>
+          <target>Ret Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2394437450 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailTo.</source>
+          <target>Angiver Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailToCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2394437450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailTo</source>
+          <target>Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control EmailToCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 4176752559 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailBodyHTML.</source>
+          <target>Angiver Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control MailBodyHTMLCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 4176752559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailBodyHTML</source>
+          <target>Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control MailBodyHTMLCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 4087765040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailSubjectHTML.</source>
+          <target>Angiver Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control MailSubjectCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 4087765040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailSubjectHTML</source>
+          <target>Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control MailSubjectCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2444190361 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Printer.</source>
+          <target>Specifies Lasernet Printer.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrinterCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2444190361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Printer</source>
+          <target>Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrinterCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 4156678290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Option.</source>
+          <target>Angiver Lasernet Option.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintMethod - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 4156678290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Option</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintMethod - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1732076187 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Parameter PromptShown For Print Request.</source>
+          <target>Specifies Parameter PromptShown For Print Request.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PromptShown - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 1732076187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parameter PromptShown For Print Request</source>
+          <target>Parameter PromptShown For Print Request</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PromptShown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2985981120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the document is archived after you print it.</source>
+          <target>Angiver, om bilaget arkiveres, efter du har udskrevet det.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control ArchiveDocumentCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 2985981120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Archive Document</source>
+          <target>Arkiver dokument</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control ArchiveDocumentCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 130299942 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many copies of the document to print.</source>
+          <target>Angiver, hvor mange kopier af bilaget der udskrives.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control NoOfCopiesCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 130299942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Copies</source>
+          <target>Antal kopier</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control NoOfCopiesCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3063818365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want the printed report to show information that is only for internal use.</source>
+          <target>Angiver, om den udskrevne rapport skal indeholde oplysninger, der kun er til intern brug.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control ShowInternalInfoCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 3063818365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Internal Information</source>
+          <target>Vis interne oplysninger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control ShowInternalInfoCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Order Letter Confirmation</source>
+          <target>IBF Ordrebrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - NamedType 61938489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The filters have been changed. Do you want to send this email?</source>
+          <target>Filtre er ændret. Vil du sende denne mail ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - NamedType FiltersChangedQst</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 2805116850" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port not selected.</source>
+          <target>Custom Port not selected.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType CustomPortNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 1484961983" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer %1 not found!</source>
+          <target>Debitor %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType NoCustomerTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 971974403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order %1 not found!</source>
+          <target>Salgsordre %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType NoDocTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 51675927" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet E-Mail and Distribution Setup is empty for Customer %1</source>
+          <target>Lasernet Email og destinationer er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType NoEmailTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 3241611474" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Fax is empty for Customer %1</source>
+          <target>Lasernet Fax er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType NoFaxTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 1769129955" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GLN Code is empty for Customer %1</source>
+          <target>GLN er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType NoGLNCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Method 732692100 - NamedType 391171126" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Printer not selected</source>
+          <target>Printer ikke valgt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Method CheckPrintMethod - NamedType PrinterNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - ReportDataItem 1192395785 - Property 1806354803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order Letter</source>
+          <target>Ordrebre</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - ReportDataItem Sales Header - Property RequestFilterHeading</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 3138384927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Options</source>
+          <target>IBF Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control IBF Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 986914767 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control FullLoad - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 986914767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control FullLoad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2474057316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print with Price &amp; Amount</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintPriceAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2474057316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print with Price &amp; Amount</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintPriceAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1387837750 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Quantity (not ship qty.)</source>
+          <target>Udskriv antal (ikke levér antal)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintQuantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1387837750 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Quantity (not ship qty.)</source>
+          <target>Udskriv antal (ikke levér antal)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintQuantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2232713760 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Sum Lines</source>
+          <target>Udskriv sum linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintSumLine - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2232713760 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Sum Lines</source>
+          <target>Udskriv sum linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintSumLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1615282716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print VAT Total</source>
+          <target>Udskriv momstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintVATTotal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1615282716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print VAT Total</source>
+          <target>Udskriv momstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintVATTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 628589999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control Lasernet Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 429193913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Result.</source>
+          <target>Angiver Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control CheckResult - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 429193913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target>Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control CheckResult - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 3269560157 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Custom Port.</source>
+          <target>Angiver Custom Port.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control CustomPortCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 3269560157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port</source>
+          <target>Custom Port</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control CustomPortCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2415022345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailSend</source>
+          <target>EmailSend</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailOption - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2033851817 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailBCC.</source>
+          <target>Angiver Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailBCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2033851817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailBCC</source>
+          <target>Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailBCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1830626943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailCC.</source>
+          <target>Angiver Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1830626943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailCC</source>
+          <target>Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1716656471 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies ability to Edit Email Properties.</source>
+          <target>Angiver mulighed for at rette Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1716656471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit Email Properties</source>
+          <target>Ret Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2394437450 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailTo.</source>
+          <target>Angiver Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailToCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2394437450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailTo</source>
+          <target>Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control EmailToCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 4176752559 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailBodyHTML.</source>
+          <target>Angiver Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control MailBodyHTMLCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 4176752559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailBodyHTML</source>
+          <target>Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control MailBodyHTMLCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 4087765040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailSubjectHTML.</source>
+          <target>Angiver Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control MailSubjectCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 4087765040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailSubjectHTML</source>
+          <target>Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control MailSubjectCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2444190361 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Printer.</source>
+          <target>Angiver Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrinterCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2444190361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Printer</source>
+          <target>Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrinterCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 4156678290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Option.</source>
+          <target>Angiver Lasernet Option.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintMethod - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 4156678290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Option</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PrintMethod - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1732076187 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Parameter PromptShown For Print Request.</source>
+          <target>Specifies Parameter PromptShown For Print Request.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PromptShown - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 1732076187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parameter PromptShown For Print Request</source>
+          <target>Parameter PromptShown For Print Request</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control PromptShown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2985981120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the document is archived after you print it.</source>
+          <target>Angiver, om bilaget arkiveres, efter du har udskrevet det.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control ArchiveDocumentCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 2985981120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Archive Document</source>
+          <target>Arkiver dokument</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control ArchiveDocumentCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 130299942 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many copies of the document to print.</source>
+          <target>Angiver, hvor mange kopier af bilaget der udskrives.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control NoOfCopiesCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 130299942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Copies</source>
+          <target>Antal kopier</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control NoOfCopiesCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 3063818365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want the printed report to show information that is only for internal use.</source>
+          <target>Angiver, om den udskrevne rapport skal indeholde oplysninger, der kun er til intern brug.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control ShowInternalInfoCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1352059284 - Control 3063818365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Internal Information</source>
+          <target>Vis interne oplysninger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrderLetter - Control ShowInternalInfoCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Sales - Quote</source>
+          <target>IBF Salgstilbud</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - NamedType 61938489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The filters have been changed. Do you want to send this email?</source>
+          <target>Filtre er ændret. Vil du sende denne mail ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - NamedType FiltersChangedQst</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 2805116850" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port not selected.</source>
+          <target>Custom Port not selected.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType CustomPortNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 1484961983" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer %1 not found!</source>
+          <target>Debitor %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType NoCustomerTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 971974403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote %1 not found!</source>
+          <target>Tilbud %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Document No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType NoDocTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 51675927" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet E-Mail and Distribution Setup is empty for Customer %1</source>
+          <target>Lasernet Email og destinationer er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType NoEmailTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 3241611474" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Fax is empty for Customer %1</source>
+          <target>Lasernet Fax er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType NoFaxTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 1769129955" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GLN Code is empty for Customer %1</source>
+          <target>GLN er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType NoGLNCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Method 732692100 - NamedType 391171126" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Printer not selected</source>
+          <target>Printer ikke valgt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Method CheckPrintMethod - NamedType PrinterNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - ReportDataItem 1192395785 - Property 1806354803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote</source>
+          <target>Salgstilbud</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - ReportDataItem Sales Header - Property RequestFilterHeading</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 3138384927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Options</source>
+          <target>IBF Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control IBF Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 986914767 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control FullLoad - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 986914767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuld belastning</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control FullLoad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 146158656 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Discount</source>
+          <target>Udskriv med rabat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintDiscount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 146158656 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Discount</source>
+          <target>Udskriv med rabat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintDiscount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2474057316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print with Price &amp; Amount</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintPriceAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2474057316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print with Price &amp; Amount</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintPriceAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2232713760 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Sum Lines</source>
+          <target>Udskriv sum linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintSumLine - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2232713760 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Sum Lines</source>
+          <target>Udskriv sum linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintSumLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1615282716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print VAT Total</source>
+          <target>Udskriv momstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintVATTotal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1615282716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print VAT Total</source>
+          <target>Udskriv momstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintVATTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1702005107 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Weight</source>
+          <target>Udskriv vægt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintWeight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1702005107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Weight</source>
+          <target>Udskriv vægt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintWeight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 628589999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control Lasernet Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 429193913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Result.</source>
+          <target>Angiver Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control CheckResult - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 429193913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target>Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control CheckResult - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 3269560157 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Custom Port.</source>
+          <target>Angiver Custom Port.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control CustomPortCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 3269560157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port</source>
+          <target>Custom Port</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control CustomPortCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2415022345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailSend</source>
+          <target>Email Send</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailOption - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2033851817 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailBCC.</source>
+          <target>Angiver Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailBCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2033851817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailBCC</source>
+          <target>Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailBCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1830626943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailCC.</source>
+          <target>Angiver Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1830626943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailCC</source>
+          <target>Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1716656471 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies ability to Edit Email Properties.</source>
+          <target>Angiver mulighed for at rette Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1716656471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit Email Properties</source>
+          <target>Ret Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2394437450 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailTo.</source>
+          <target>Angiver Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailToCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2394437450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailTo</source>
+          <target>Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control EmailToCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 4176752559 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailBodyHTML.</source>
+          <target>Angiver Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control MailBodyHTMLCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 4176752559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailBodyHTML</source>
+          <target>Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control MailBodyHTMLCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 4087765040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailSubjectHTML.</source>
+          <target>Angiver Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control MailSubjectCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 4087765040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailSubjectHTML</source>
+          <target>Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control MailSubjectCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2444190361 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Printer.</source>
+          <target>Angiver Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrinterCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2444190361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Printer</source>
+          <target>Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrinterCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 4156678290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Option.</source>
+          <target>Angiver Lasernet Option.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintMethod - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 4156678290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Option</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PrintMethod - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1732076187 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Parameter PromptShown For Print Request.</source>
+          <target>Specifies Parameter PromptShown For Print Request.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PromptShown - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 1732076187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parameter PromptShown For Print Request</source>
+          <target>Parameter PromptShown For Print Request</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control PromptShown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2985981120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the document is archived after you print it.</source>
+          <target>Angiver, om bilaget arkiveres, efter du har udskrevet det.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control ArchiveDocumentCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 2985981120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Archive Document</source>
+          <target>Arkiver dokument</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control ArchiveDocumentCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 130299942 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many copies of the document to print.</source>
+          <target>Angiver, hvor mange kopier af bilaget der udskrives.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control NoOfCopiesCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 130299942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Copies</source>
+          <target>Antal kopier</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control NoOfCopiesCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 3063818365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want the printed report to show information that is only for internal use.</source>
+          <target>Angiver, om den udskrevne rapport skal indeholde oplysninger, der kun er til intern brug.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control ShowInternalInfoCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3779609414 - Control 3063818365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Internal Information</source>
+          <target>Vis interne oplysninger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuote - Control ShowInternalInfoCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Sales - Quote Letter</source>
+          <target>IBF Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - NamedType 61938489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The filters have been changed. Do you want to send this email?</source>
+          <target>Filtre er ændret. Vil du sende denne mail ?</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - NamedType FiltersChangedQst</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 2805116850" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port not selected.</source>
+          <target>Custom Port not selected.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType CustomPortNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 1484961983" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer %1 not found!</source>
+          <target>Debitor %1 ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType NoCustomerTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 971974403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote %1 not found!</source>
+          <target>Tilbud % ikke fundet!</target>
+          <note from="Developer" annotates="general" priority="2">%1 Document No.</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">The placeholder "%1" was found in source, but not in target.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType NoDocTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 51675927" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet E-Mail and Distribution Setup is empty for Customer %1</source>
+          <target>Lasernet Email og destinationer er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType NoEmailTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 3241611474" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Fax is empty for Customer %1</source>
+          <target>Lasernet Fax er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType NoFaxTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 1769129955" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GLN Code is empty for Customer %1</source>
+          <target>GLN er tom for debitor %1</target>
+          <note from="Developer" annotates="general" priority="2">%1 Customer No.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType NoGLNCodeTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Method 732692100 - NamedType 391171126" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Printer not selected</source>
+          <target>Printer ikke valgt</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Method CheckPrintMethod - NamedType PrinterNotSelectedTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - ReportDataItem 1192395785 - Property 1806354803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote Letter</source>
+          <target>Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - ReportDataItem Sales Header - Property RequestFilterHeading</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3138384927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Options</source>
+          <target>IBF Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control IBF Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 986914767 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control FullLoad - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 986914767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Full Load</source>
+          <target>Fuldt læs</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control FullLoad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 987782936 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Price</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintPrice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 987782936 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Price</source>
+          <target>Udskriv med priser</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3546780597 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Quote Total</source>
+          <target>Udskriv tilbudstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintTotal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3546780597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Quote Total</source>
+          <target>Udskriv tilbudstotal</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2121592663 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Total Lines</source>
+          <target>Udskriv total linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintTotalLine - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2121592663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Total Lines</source>
+          <target>Udskriv total linjer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintTotalLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 142794796 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Salesperson / Quote Date</source>
+          <target>Brug sælger / tilbudsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control UseSalespersonQuotedate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 142794796 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Salesperson / Quote Date</source>
+          <target>Brug sælger / tilbudsdato</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control UseSalespersonQuotedate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 628589999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control Lasernet Option - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 429193913 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Result.</source>
+          <target>Angiver Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control CheckResult - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 429193913 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Result</source>
+          <target>Resultat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control CheckResult - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3269560157 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Custom Port.</source>
+          <target>Angiver Custom Port.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control CustomPortCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3269560157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Port</source>
+          <target>Custom Port</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control CustomPortCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2415022345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailSend</source>
+          <target>EmailSend</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailOption - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2033851817 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailBCC.</source>
+          <target>Angiver Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailBCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2033851817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailBCC</source>
+          <target>Email BCC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailBCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 1830626943 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailCC.</source>
+          <target>Angiver Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailCCCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 1830626943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailCC</source>
+          <target>Email CC</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailCCCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 1716656471 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies ability to Edit Email Properties.</source>
+          <target>Angiver mulighed for at rette Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 1716656471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit Email Properties</source>
+          <target>Ret Email</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2394437450 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies EmailTo.</source>
+          <target>Angiver Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailToCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2394437450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EmailTo</source>
+          <target>Email til</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control EmailToCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 4176752559 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailBodyHTML.</source>
+          <target>Angiver Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control MailBodyHTMLCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 4176752559 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailBodyHTML</source>
+          <target>Mail Brødtekst</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control MailBodyHTMLCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 4087765040 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies MailSubjectHTML.</source>
+          <target>Angiver Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control MailSubjectCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 4087765040 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MailSubjectHTML</source>
+          <target>Mail Emne</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control MailSubjectCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2444190361 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Printer.</source>
+          <target>Angiver Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrinterCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2444190361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Printer</source>
+          <target>Lasernet Printer</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrinterCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 4156678290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Lasernet Option.</source>
+          <target>Angiver Lasernet Option.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintMethod - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 4156678290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lasernet Option</source>
+          <target>Lasernet Option</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PrintMethod - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 1732076187 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies Parameter PromptShown For Print Request.</source>
+          <target>Specifies Parameter PromptShown For Print Request.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PromptShown - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 1732076187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parameter PromptShown For Print Request</source>
+          <target>Parameter PromptShown For Print Request</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control PromptShown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Indstillinger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2985981120 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if the document is archived after you print it.</source>
+          <target>Angiver, om bilaget arkiveres, efter du har udskrevet det.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control ArchiveDocumentCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 2985981120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Archive Document</source>
+          <target>Arkiver dokument</target>
+          <target>Arkivér bilag</target>
+          <target>Arkivér dokument</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control ArchiveDocumentCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 130299942 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many copies of the document to print.</source>
+          <target>Angiver, hvor mange kopier af bilaget der udskrives.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control NoOfCopiesCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 130299942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Copies</source>
+          <target>Antal kopier</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control NoOfCopiesCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3063818365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want the printed report to show information that is only for internal use.</source>
+          <target>Angiver, om den udskrevne rapport skal indeholde oplysninger, der kun er til intern brug.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control ShowInternalInfoCtrl - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2589418848 - Control 3063818365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Internal Information</source>
+          <target>Vis interne oplysninger</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesQuoteLetter - Control ShowInternalInfoCtrl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3119311200 - Action 858525065 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3109040658">
+          <source>Quote Letter</source>
+          <target>Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IBF_LNBranelSalesQuote - Action IBF_PrintQuoteLetter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3119311200 - Action 858525065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3109040658">
+          <source>Quote Letter</source>
+          <target>Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IBF_LNBranelSalesQuote - Action IBF_PrintQuoteLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2171157714 - Action 3165478045 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Order Letter</source>
+          <target>Ordrebrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IBF_LNSalesOrder - Action IBF_PrintOrderLetter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2171157714 - Action 3165478045 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Order Letter</source>
+          <target>Ordrebrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IBF_LNSalesOrder - Action IBF_PrintOrderLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3779609414 - Action 858525065 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>Quote Letter</source>
+          <target>Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IBF_LNSalesQuote - Action IBF_PrintQuoteLetter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3779609414 - Action 858525065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>Quote Letter</source>
+          <target>Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension IBF_LNSalesQuote - Action IBF_PrintQuoteLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1906457615 - EnumValue 3265452399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Sales Order Letter</source>
+          <target>IBF Ordrebrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension IBF_LNFPLDocumentType - EnumValue IBFSalesOrderLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 1906457615 - EnumValue 1029842499 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF Sales Quote Letter</source>
+          <target>IBF Tilbudsbrev</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension IBF_LNFPLDocumentType - EnumValue IBFSalesQuoteLetter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1052015482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IBF_LNIntegration</source>
+          <target>IBF_LNIntegration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet IBF_LNIntegration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 146158656 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Discount</source>
+          <target>Udskriv med rabat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintDiscount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2171157714 - Control 146158656 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Discount</source>
+          <target>Udskriv med rabat</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report IBF_LNSalesOrder - Control PrintDiscount - Property ToolTip</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

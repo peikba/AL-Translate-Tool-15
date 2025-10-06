@@ -47,9 +47,9 @@ page 78613 "BAC Translation Activities"
 
     trigger OnOpenPage()
     var
-        DateFilterTxt: Text;
-        DateFilterLbl: Label '%1..%2';
         UserAccess: Record "BAC User Access";
+        DateFilterTxt: Text;
+        DateFilterLbl: Label '%1..%2', Comment='%1=From date filter, %2=To date filter';
     begin
         if not Rec.Get() then begin
             Rec.Init();

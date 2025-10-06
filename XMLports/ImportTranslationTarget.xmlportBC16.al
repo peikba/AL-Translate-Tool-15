@@ -77,6 +77,12 @@ xmlport 78609 "BAC Import Trans Target BC16"
                             {
                                 XmlName = 'id';
                             }
+                            textattribute(maxwidth)
+                            {
+                                XmlName = 'maxwidth';
+                                Occurrence = Optional;
+                            }
+
                             textattribute("size-unit")
                             {
                                 XmlName = 'size-unit';
@@ -178,7 +184,8 @@ xmlport 78609 "BAC Import Trans Target BC16"
                 }
             }
         }
-    }
+}
+
 
     var
         TransNotes: Record "BAC Translation Notes";

@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Local BC230",
+            "name": "Local BC260",
             "type": "al",
             "request": "launch",
             "server": "http://localhost",
-            "serverInstance": "BC230",
+            "serverInstance": "BC260",
             "authentication": "Windows",
             "breakOnError": true,
             "breakOnRecordWrite": false,
@@ -14,7 +14,9 @@
             "enableSqlInformationDebugger": true,
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
-            "numberOfSqlStatements": 10
+            "numberOfSqlStatements": 10,
+            "startupObjectType": "Report",
+            "startupObjectId": 78600,
         },
         {
             "name": "Translate Server",

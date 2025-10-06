@@ -1,4 +1,5 @@
 #pragma implicitwith disable
+#pragma warning disable AW0006
 page 78602 "BAC Target Language List"
 {
     PageType = List;
