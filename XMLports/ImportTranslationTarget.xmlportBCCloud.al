@@ -1,6 +1,6 @@
-xmlport 78609 "BAC Import Trans Target BC16"
+xmlport 78609 "BAC Import Trans Target BC"
 {
-    Caption = 'Import Translation Target BC16';
+    Caption = 'Import Translation Target BC Cloud';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
@@ -21,6 +21,15 @@ xmlport 78609 "BAC Import Trans Target BC16"
                 trigger OnAfterAssignVariable()
                 begin
                     TransProject."Xliff Version" := version;
+                end;
+            }
+            textattribute(schemaLocation)
+            {
+                XmlName = 'schemaLocation';
+                Occurrence = Optional;
+                trigger OnAfterAssignVariable()
+                begin
+                    //TransProject."Xliff Version" := version;
                 end;
             }
             textelement(infile)
@@ -184,7 +193,7 @@ xmlport 78609 "BAC Import Trans Target BC16"
                 }
             }
         }
-}
+    }
 
 
     var

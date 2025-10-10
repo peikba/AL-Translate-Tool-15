@@ -15,8 +15,8 @@
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
-            "startupObjectType": "Report",
-            "startupObjectId": 78600,
+            // "startupObjectType": "Report",
+            // "startupObjectId": 78600,
         },
         {
             "name": "Translate Server",

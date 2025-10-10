@@ -75,6 +75,11 @@ xmlport 78600 "BAC Import Translation Source"
                             fieldattribute(id; Source."Trans-Unit Id")
                             {
                             }
+                            textattribute(maxwidth)
+                            {
+                                XmlName = 'maxwidth';
+                                Occurrence = Optional;
+                            }
                             textattribute("size-unit")
                             {
                                 trigger OnAfterAssignVariable()

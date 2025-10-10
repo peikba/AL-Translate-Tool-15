@@ -1,2 +1,4 @@
 *.app
 .vscode/.alcache/*.*
+.vscode/rad.json
+.vscode/launch.json

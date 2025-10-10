@@ -16,19 +16,17 @@ codeunit 78600 "BAC Google Translate Rest"
     end;
 
     local procedure GetLines(inTxt: Text) outTxt: Text;
-
+    var
+        TestTextLbl: Label '\u200b\u200b';
     begin
         if copystr(inTxt, 1, 1) <> '[' then
             exit;
         while copystr(inTxt, 1, 1) = '[' do
             inTxt := DelChr(inTxt, '<', '[');
-        inTxt := DelChr(inTxt, '<', '"');
-        outTxt := CopyStr(inTxt, 1, strpos(inTxt, '"') - 1);
-        if StrPos(inTxt, '],[') > 0 then begin
-            inTxt := CopyStr(inTxt, StrPos(inTxt, '],[') + 3);
-            inTxt := DelChr(inTxt, '<', '"');
-            outTxt += CopyStr(inTxt, 1, strpos(inTxt, '"') - 1);
-        end;
+        outTxt := CopyStr(inTxt, 1, strpos(inTxt, '","') - 1);
+        OutTxt := DelChr(OutTxt, '<', '"');
+        if StrPos(outTxt, TestTextLbl) > 0 then
+            outTxt := CopyStr(outTxt, 1, StrPos(outTxt, TestTextLbl) - 1) + CopyStr(outTxt, StrPos(outTxt, TestTextLbl) + StrLen(TestTextLbl));
     end;
 
     var

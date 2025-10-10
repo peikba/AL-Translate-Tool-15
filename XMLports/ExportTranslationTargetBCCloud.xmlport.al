@@ -1,6 +1,6 @@
-xmlport 78608 "BAC Export Trans Target BC16"
+xmlport 78608 "BAC Export Trans Target BC"
 {
-    Caption = 'Export Translation Target BC16';
+    Caption = 'Export Translation Target BC Cloud';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Export;
     Encoding = UTF8;

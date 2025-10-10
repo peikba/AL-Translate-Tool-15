@@ -197,7 +197,7 @@ page 78603 "BAC Translation Target List"
                 var
                     TransProject: Record "BAC Translation Project";
                     ExportTranslation: XmlPort "BAC Export Translation Target";
-                    ExportTranslationBC16: XmlPort "BAC Export Trans Target BC16";
+                    ExportTranslationBC: XmlPort "BAC Export Trans Target BC";
                     ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
                     WarningTxt: Label 'Export the Translation file?';
                 begin
@@ -209,10 +209,10 @@ page 78603 "BAC Translation Target List"
                                     ExportTranslation.SetProjectCode(Rec."Project Code", TransProject."Source Language ISO code", Rec."Target Language ISO code");
                                     ExportTranslation.Run();
                                 end;
-                            TransProject."NAV Version"::"Business Central >=BC16":
+                            TransProject."NAV Version"::"Business Central Cloud":
                                 begin
-                                    ExportTranslationBC16.SetProjectCode(Rec."Project Code", TransProject."Source Language ISO code", Rec."Target Language ISO code");
-                                    ExportTranslationBC16.Run();
+                                    ExportTranslationBC.SetProjectCode(Rec."Project Code", TransProject."Source Language ISO code", Rec."Target Language ISO code");
+                                    ExportTranslationBC.Run();
                                 end;
                             TransProject."NAV Version"::"Dynamics NAV (BC11)":
                                 begin

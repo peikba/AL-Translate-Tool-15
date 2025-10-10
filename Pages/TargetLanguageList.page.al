@@ -85,7 +85,7 @@ page 78602 "BAC Target Language List"
                 var
                     TransProject: Record "BAC Translation Project";
                     ExportTranslation: XmlPort "BAC Export Translation Target";
-                    ExportTranslationBC16: XmlPort "BAC Export Trans Target BC16";
+                    ExportTranslationBC: XmlPort "BAC Export Trans Target BC";
                     ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
                     WarningTxt: Label 'Export the Translation file?';
                 begin
@@ -97,10 +97,10 @@ page 78602 "BAC Target Language List"
                                     ExportTranslation.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                     ExportTranslation.Run();
                                 end;
-                            TransProject."NAV Version"::"Business Central >=BC16":
+                            TransProject."NAV Version"::"Business Central Cloud":
                                 begin
-                                    ExportTranslationBC16.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
-                                    ExportTranslationBC16.Run();
+                                    ExportTranslationBC.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
+                                    ExportTranslationBC.Run();
                                 end;
                             TransProject."NAV Version"::"Dynamics NAV (BC11)":
                                 begin
@@ -124,7 +124,7 @@ page 78602 "BAC Target Language List"
                     TransTarget: Record "BAC Translation Target";
                     TransProject: Record "BAC Translation Project";
                     ImportTarget: XmlPort "BAC Import Translation Target";
-                    ImportTargetBC21: XmlPort "BAC Import Trans Target BC16";
+                    ImportTargetBC: XmlPort "BAC Import Trans Target BC";
                     ImportTarget2018: XmlPort "BAC Import Trans Target 2018";
                     FileName: Text;
                     DeleteWarningTxt: Label 'This will overwrite existing Translation Target entries for %1 in %2 format', Comment = '%1 = Language Code, %2 = Format';
@@ -142,11 +142,11 @@ page 78602 "BAC Target Language List"
                                 ImportTarget.Run();
                                 Success := ImportTarget.FileImported()
                             end;
-                        TransProject."NAV Version"::"Business Central >=BC16":
+                        TransProject."NAV Version"::"Business Central Cloud":
                             begin
-                                ImportTargetBC21.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
-                                ImportTargetBC21.Run();
-                                Success := ImportTargetBC21.FileImported()
+                                ImportTargetBC.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
+                                ImportTargetBC.Run();
+                                Success := ImportTargetBC.FileImported()
                             end;
                         TransProject."NAV Version"::"Dynamics NAV (BC11)":
                             begin
@@ -162,51 +162,6 @@ page 78602 "BAC Target Language List"
                         message(ImportedTxt, FileName, Rec."Project Code");
                 end;
             }
-#if BASE
-            action("Import Base Target")
-            {
-                ApplicationArea = All;
-                Caption = 'Import Base Target';
-                Image = ImportCodes;
-
-                trigger OnAction()
-                var
-                    TransSource: Record "BAC Translation Source";
-                    TransNotes: Record "BAC Base Translation Notes";
-                    TransProject: Record "BAC Translation Project";
-                    ImportTargetXML: XmlPort "BAC Import Base Trans. Target";
-                    ImportTarget2018XML: XmlPort "BAC Import Base Trans Tgt 2018";
-                    DeleteWarningTxt: Label 'This will overwrite the Base Translation target for %1', Comment = '%1 = Project Code';
-                    ImportedTxt: Label 'The file %1 has been imported into project %2', Comment = '%1 = File Name, %2 = Project Code';
-                begin
-                    TransSource.SetRange("Project Code", Rec."Project Code");
-                    if not TransSource.IsEmpty then
-                        if Confirm(DeleteWarningTxt, false, Rec."Project Code") then begin
-                            TransSource.DeleteAll();
-                            TransNotes.DeleteAll();
-                        end else
-                            exit;
-                    TransProject.Get(Rec."Project Code");
-                    case TransProject."NAV Version" of
-                        TransProject."NAV Version"::"Business Central ->BC20":
-                            begin
-                                ImportTargetXML.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
-                                ImportTargetXML.Run();
-                                Success := ImportTargetXML.FileImported()
-                            end;
-                        TransProject."NAV Version"::"Dynamics NAV (BC11)":
-                            begin
-                                ImportTarget2018XML.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
-                                ImportTarget2018XML.Run();
-                                Success := ImportTarget2018XML.FileImported();
-                            end;
-                    end;
-                    TransProject.Get(Rec."Project Code");
-                    if (TransProject."File Name" <> '') and Success then
-                        message(ImportedTxt, TransProject."File Name", Rec."Project Code");
-                end;
-            }
-#endif
         }
         area(Promoted)
         {

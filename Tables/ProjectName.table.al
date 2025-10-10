@@ -106,8 +106,8 @@ table 78600 "BAC Translation Project"
         {
             DataClassification = SystemMetadata;
             Caption = 'NAV Version';
-            OptionMembers = "Dynamics NAV (BC11)","Business Central ->BC15","Business Central >=BC16";
-            OptionCaption = 'Dynamics NAV (BC11),Business Central ->BC15,Business Central >=BC16';
+            OptionMembers = "Dynamics NAV (BC11)","Business Central ->BC15","Business Central Cloud";
+            OptionCaption = 'Dynamics NAV (BC11),Business Central ->BC15,Business Central BC Cloud';
             InitValue = 1;
         }
         field(130; Status; Option)

@@ -99,7 +99,7 @@ page 78600 "BAC Trans Project List"
                             exit;
                     case Rec."NAV Version" of
                         Rec."NAV Version"::"Business Central ->BC15",
-                        Rec."NAV Version"::"Business Central >=BC16":
+                        Rec."NAV Version"::"Business Central Cloud":
                             begin
                                 ImportSourceXML.SetProjectCode(Rec."Project Code");
                                 ImportSourceXML.Run();

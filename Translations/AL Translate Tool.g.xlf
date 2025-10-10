@@ -304,7 +304,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Project - Field NAV Version - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1579383866 - Field 205365381 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Dynamics NAV (BC11),Business Central -&gt;BC15,Business Central &gt;=BC16</source>
+          <source>Dynamics NAV (BC11),Business Central -&gt;BC15,Business Central BC Cloud</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC Translation Project - Field NAV Version - Property OptionCaption</note>
         </trans-unit>
@@ -597,6 +597,11 @@
           <source>User Name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table BAC User Access - Field User Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3123051137 - Method 3537485 - NamedType 2252820859" size-unit="char" translate="yes" xml:space="preserve">
+          <source>\u200b\u200b</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BAC Google Translate Rest - Method GetLines - NamedType TestTextLbl</note>
         </trans-unit>
         <trans-unit id="Page 1679597293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>About AL Translation Tool</source>
@@ -1153,10 +1158,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Export Trans Target 2018 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="XmlPort 4211651675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Export Translation Target BC16</source>
+        <trans-unit id="XmlPort 306340362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Translation Target BC Cloud</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Export Trans Target BC16 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Export Trans Target BC - Property Caption</note>
         </trans-unit>
         <trans-unit id="XmlPort 3217729930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Export Translation Target</source>
@@ -1208,20 +1213,20 @@
           <note from="Developer" annotates="general" priority="2">%1 = Project Source Language, %2 = Language ISO code, %3 = Source Langiage in file</note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target 2018 - XmlPortNode source-language - Method OnAfterAssignVariable - NamedType WrongSourceLangTxt</note>
         </trans-unit>
-        <trans-unit id="XmlPort 1487167820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Import Translation Target BC16</source>
+        <trans-unit id="XmlPort 4251509577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Translation Target BC Cloud</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target BC16 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target BC - Property Caption</note>
         </trans-unit>
-        <trans-unit id="XmlPort 1487167820 - NamedType 1118720440" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="XmlPort 4251509577 - NamedType 1118720440" size-unit="char" translate="yes" xml:space="preserve">
           <source>Project Name is Missing</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target BC16 - NamedType MissingProjNameTxt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target BC - NamedType MissingProjNameTxt</note>
         </trans-unit>
-        <trans-unit id="XmlPort 1487167820 - XmlPortNode 1251761246 - Method 1633929414 - NamedType 1474867470" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="XmlPort 4251509577 - XmlPortNode 1251761246 - Method 1633929414 - NamedType 1474867470" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 must be %2 in file - The file %1 is %3</source>
           <note from="Developer" annotates="general" priority="2">%1=source-language, %2="Source Language ISO code", %3=source-language</note>
-          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target BC16 - XmlPortNode source-language - Method OnAfterAssignVariable - NamedType WrongSourceLangTxt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Trans Target BC - XmlPortNode source-language - Method OnAfterAssignVariable - NamedType WrongSourceLangTxt</note>
         </trans-unit>
         <trans-unit id="XmlPort 1530383145 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Import Translation Source 2018</source>
