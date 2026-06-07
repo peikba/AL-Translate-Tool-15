@@ -91,6 +91,7 @@ page 78600 "BAC Trans Project List"
                     ImportedTxt: Label 'The file %1 has been imported into project %2', Comment = '%1 = File Name, %2 = Project Code';
                 begin
                     TransSource.SetRange("Project Code", Rec."Project Code");
+                    TransNotes.SetRange("Project Code", Rec."Project Code");
                     if not TransSource.IsEmpty then
                         if Confirm(DeleteWarningTxt, false, Rec."Project Code") then begin
                             TransSource.DeleteAll();

@@ -13,11 +13,20 @@ table 78600 "BAC Translation Project"
             trigger OnValidate();
             var
                 TransSetup: Record "BAC Translation Setup";
+#if BC21
                 NoSeriesMgt: Codeunit NoSeriesManagement;
+#else
+                NoSeries: Codeunit "No. Series";
+#endif
             begin
                 if "Project Code" <> xRec."Project Code" then begin
                     TransSetup.GET();
+#if CLEAN21
                     NoSeriesMgt.TestManual(TransSetup."Project Nos.");
+#else
+                    NoSeries.TestManual(TransSetup."Project Nos.");
+#endif
+
                     "No. Series" := '';
                 end;
             end;
@@ -146,14 +155,25 @@ table 78600 "BAC Translation Project"
     trigger OnInsert()
     var
         TransSetup: Record "BAC Translation Setup";
+#if BC21
         NoSeriesMgt: Codeunit NoSeriesManagement;
+#else
+        NoSeries: Codeunit "No. Series";
+#endif
     begin
         "Created By" := copystr(UserId(), 1, MaxStrLen(("Created By")));
         "Creation Date" := Today;
         if "Project Code" = '' then begin
             TransSetup.get();
             TransSetup.TestField("Project Nos.");
+#if BC21            
             NoSeriesMgt.InitSeries(TransSetup."Project Nos.", xRec."No. Series", 0D, "Project Code", "No. Series");
+#else
+            "No. Series" := TransSetup."Project Nos.";
+            if NoSeries.AreRelated(TransSetup."Project Nos.", xRec."No. Series") then
+                "No. Series" := xRec."No. Series";
+            "Project Code" := NoSeries.GetNextNo("No. Series");
+#endif
             TransSetup.TestField("Default Source Language code");
             if "Source Language" = '' then
                 validate("Source Language", TransSetup."Default Source Language code");
@@ -183,16 +203,28 @@ table 78600 "BAC Translation Project"
     procedure AssistEdit(): Boolean;
     var
         TransSetup: Record "BAC Translation Setup";
+#if BC21
         NoSeriesMgt: Codeunit NoSeriesManagement;
+#else
+        NoSeries: Codeunit "No. Series";
+#endif
     begin
         TransProject := Rec;
         TransSetup.get;
         TransSetup.TestField("Project Nos.");
-        if NoSeriesMgt.SelectSeries(TransSetup."Project Nos.", xRec."No. Series", "No. Series") then begin
-            NoSeriesMgt.SetSeries("Project Code");
+#if BC21
+        if NoSeriesMgt.SelectSeries(SeminarSetup."Seminar Nos.", xRec."No. Series", Seminar."No. Series") then begin
+            NoSeriesMgt.SetSeries(Seminar."No.");
+            Rec := Seminar;
+            exit(true);
+        end;
+#else
+        if NoSeries.LookupRelatedNoSeries(TransSetup."Project Nos.", xRec."No. Series", Rec."No. Series") then begin
+            Rec."Project Code" := NoSeries.GetNextNo(TransSetup."Project Nos.");
             Rec := TransProject;
             exit(true);
         end;
+#endif
     end;
 
     procedure OpenTranslationTargetPage()
