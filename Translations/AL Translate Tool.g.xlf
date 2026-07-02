@@ -898,6 +898,11 @@
           <note from="Developer" annotates="general" priority="2">%1 = Counter</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Method FindDuplicates - NamedType FinishedTxt</note>
         </trans-unit>
+        <trans-unit id="Page 1936724860 - Method 1264878625 - NamedType 1997793078" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 Source captions updated</source>
+          <note from="Developer" annotates="general" priority="2">%1 = Counter</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Translation Target List - Method RemoveObsoleteTranslations - NamedType FinishedTxt</note>
+        </trans-unit>
         <trans-unit id="Page 1936724860 - Method 3089930585 - NamedType 149879980" size-unit="char" translate="yes" xml:space="preserve">
           <source>Converting #1###### of #2######</source>
           <note from="Developer" annotates="general" priority="2">#1 = Counter, #2 = Total Count</note>

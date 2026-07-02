@@ -7,6 +7,7 @@
             "request": "launch",
             "environmentType": "Sandbox",
             "environmentName": "sandbox",
+            "tenant": "635a4661-7ae2-4888-a0e4-42f19cb61486",
             "startupObjectId": 22,
             "breakOnError": "All",
             "breakOnRecordWrite": "None",

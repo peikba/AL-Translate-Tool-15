@@ -1,4 +1,3 @@
-#pragma implicitwith disable
 page 78603 "BAC Translation Target List"
 {
     Caption = 'Translation Target List';
@@ -440,6 +439,8 @@ page 78603 "BAC Translation Target List"
         Counter: Integer;
         FinishedTxt: Label '%1 Source captions updated', Comment = '%1 = Counter';
     begin
+        TransTarget.SetFilter("Project Code", Rec.GetFilter("Project Code"));
+        TransTarget.SetFilter("Target Language", Rec.GetFilter("Target Language"));
         TransTarget.Modifyall(Translate, false);
         if TransSource.FindSet() then
             repeat
@@ -455,7 +456,31 @@ page 78603 "BAC Translation Target List"
                         end;
                     until TransTarget.Next() = 0;
             until TransSource.Next() = 0;
-        message(FinishedTxt, Counter);
+        message(FinishedTxt, Counter + RemoveObsoleteTranslations());
+    end;
+
+    local procedure RemoveObsoleteTranslations(): Integer
+    var
+        TransTarget: Record "BAC Translation Target";
+        DeleteTransTarget: Record "BAC Translation Target";
+        TransSource: Record "BAC Translation Source";
+        Counter: Integer;
+        FinishedTxt: Label '%1 Source captions updated', Comment = '%1 = Counter';
+    begin
+        TransTarget.SetFilter("Project Code", Rec.GetFilter("Project Code"));
+        TransTarget.SetFilter("Target Language", Rec.GetFilter("Target Language"));
+        if TransTarget.FindSet() then
+            repeat
+                TransSource.SetRange("Project Code", TransTarget."Project Code");
+                TransSource.SetRange("Trans-Unit Id", TransTarget."Trans-Unit Id");
+                if TransSource.IsEmpty() then begin
+                    DeleteTransTarget := TransTarget;
+                    DeleteTransTarget.Delete();
+                    Counter += 1;
+                end;
+            until TransTarget.Next() = 0;
+        CurrPage.Update(false);
+        Exit(Counter);
+
     end;
 }
-#pragma implicitwith restore
