@@ -51,6 +51,7 @@ page 78605 "BAC Trans Target Factbox"
         Target: Record "BAC Translation Target";
     begin
         Target.SetRange("Project Code", Rec."Project Code");
+        Target.SetRange("Target Language", Rec."Target Language");
         TotalCaptions := Target.Count;
         Target.SetRange(Source, '');
         TotalMissingCaptions := Target.Count;

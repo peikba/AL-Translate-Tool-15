@@ -61,7 +61,8 @@ page 78603 "BAC Translation Target List"
             part(TargetFactbox; "BAC Trans Target Factbox")
             {
                 SubPageLink = "Project Code" = field("Project Code"),
-                            "Trans-Unit Id" = field("Trans-Unit Id");
+                            "Trans-Unit Id" = field("Trans-Unit Id"),
+                            "Target Language" = field("Target Language");
                 ApplicationArea = All;
             }
 
